@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822953C029EABCFD00903562 /* DateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822953BF29EABCFD00903562 /* DateServiceProtocol.swift */; };
+		82489E0629E9DEE80047D1D5 /* DateModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0129E9DEE80047D1D5 /* DateModuleBuilder.swift */; };
+		82489E0729E9DEE80047D1D5 /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0229E9DEE80047D1D5 /* DatePresenter.swift */; };
+		82489E0829E9DEE80047D1D5 /* DateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0329E9DEE80047D1D5 /* DateRouter.swift */; };
+		82489E0A29E9DEE80047D1D5 /* DateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0529E9DEE80047D1D5 /* DateInteractor.swift */; };
+		82489E1229E9DF500047D1D5 /* RateModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0D29E9DF500047D1D5 /* RateModuleBuilder.swift */; };
+		82489E1329E9DF500047D1D5 /* RatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0E29E9DF500047D1D5 /* RatePresenter.swift */; };
+		82489E1429E9DF500047D1D5 /* RateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E0F29E9DF500047D1D5 /* RateRouter.swift */; };
+		82489E1529E9DF500047D1D5 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1029E9DF500047D1D5 /* RateViewController.swift */; };
+		82489E1629E9DF500047D1D5 /* RateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1129E9DF500047D1D5 /* RateInteractor.swift */; };
+		82489E1929E9DFB80047D1D5 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1829E9DFB80047D1D5 /* DateService.swift */; };
+		82489E1B29E9E0720047D1D5 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1A29E9E0720047D1D5 /* RateService.swift */; };
+		82489E1E29E9E1350047D1D5 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 82489E1D29E9E1350047D1D5 /* SwiftyJSON */; };
 		827CF9FB29E8978400F4E763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF9FA29E8978400F4E763 /* AppDelegate.swift */; };
-		827CF9FD29E8978400F4E763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF9FC29E8978400F4E763 /* SceneDelegate.swift */; };
-		827CF9FF29E8978400F4E763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF9FE29E8978400F4E763 /* ViewController.swift */; };
-		827CFA0229E8978400F4E763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827CFA0029E8978400F4E763 /* Main.storyboard */; };
 		827CFA0429E8978500F4E763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827CFA0329E8978500F4E763 /* Assets.xcassets */; };
 		827CFA0729E8978500F4E763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827CFA0529E8978500F4E763 /* LaunchScreen.storyboard */; };
+		827CFA1029E897B300F4E763 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 827CFA0F29E897B300F4E763 /* Alamofire */; };
+		82AF958B29EFC7E20011B9BF /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF958A29EFC7E20011B9BF /* DateViewController.swift */; };
+		82BE8E4429F5B6CB002DBD08 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE8E4329F5B6CB002DBD08 /* DateTableViewCell.swift */; };
+		82BE8E4629F5B6F0002DBD08 /* DateHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE8E4529F5B6F0002DBD08 /* DateHeaderCell.swift */; };
+		82BE8E4829F5B71B002DBD08 /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE8E4729F5B71B002DBD08 /* RateTableViewCell.swift */; };
+		82BE8E4A29F5B749002DBD08 /* RateHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE8E4929F5B749002DBD08 /* RateHeaderCell.swift */; };
+		82BE8E4C29F5B9BF002DBD08 /* RateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BE8E4B29F5B9BF002DBD08 /* RateServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		822953BF29EABCFD00903562 /* DateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceProtocol.swift; sourceTree = "<group>"; };
+		82489E0129E9DEE80047D1D5 /* DateModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModuleBuilder.swift; sourceTree = "<group>"; };
+		82489E0229E9DEE80047D1D5 /* DatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
+		82489E0329E9DEE80047D1D5 /* DateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRouter.swift; sourceTree = "<group>"; };
+		82489E0529E9DEE80047D1D5 /* DateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInteractor.swift; sourceTree = "<group>"; };
+		82489E0D29E9DF500047D1D5 /* RateModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModuleBuilder.swift; sourceTree = "<group>"; };
+		82489E0E29E9DF500047D1D5 /* RatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePresenter.swift; sourceTree = "<group>"; };
+		82489E0F29E9DF500047D1D5 /* RateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateRouter.swift; sourceTree = "<group>"; };
+		82489E1029E9DF500047D1D5 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		82489E1129E9DF500047D1D5 /* RateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInteractor.swift; sourceTree = "<group>"; };
+		82489E1829E9DFB80047D1D5 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		82489E1A29E9E0720047D1D5 /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
 		827CF9F729E8978400F4E763 /* Exchange Rates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Rates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827CF9FA29E8978400F4E763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		827CF9FC29E8978400F4E763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		827CF9FE29E8978400F4E763 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		827CFA0129E8978400F4E763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		827CFA0329E8978500F4E763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		827CFA0629E8978500F4E763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		827CFA0829E8978500F4E763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AF958A29EFC7E20011B9BF /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		82BE8E4329F5B6CB002DBD08 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		82BE8E4529F5B6F0002DBD08 /* DateHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderCell.swift; sourceTree = "<group>"; };
+		82BE8E4729F5B71B002DBD08 /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
+		82BE8E4929F5B749002DBD08 /* RateHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateHeaderCell.swift; sourceTree = "<group>"; };
+		82BE8E4B29F5B9BF002DBD08 /* RateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +63,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82489E1E29E9E1350047D1D5 /* SwiftyJSON in Frameworks */,
+				827CFA1029E897B300F4E763 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82489DFF29E9DE530047D1D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				827CFA0829E8978500F4E763 /* Info.plist */,
+				827CFA0529E8978500F4E763 /* LaunchScreen.storyboard */,
+				827CFA0329E8978500F4E763 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82489E0029E9DE930047D1D5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				827CF9FA29E8978400F4E763 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		82489E0B29E9DEEF0047D1D5 /* DateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82BE8E4129F5B3EA002DBD08 /* Cells */,
+				82AF958A29EFC7E20011B9BF /* DateViewController.swift */,
+				82489E0529E9DEE80047D1D5 /* DateInteractor.swift */,
+				82489E0229E9DEE80047D1D5 /* DatePresenter.swift */,
+				82489E0329E9DEE80047D1D5 /* DateRouter.swift */,
+				82489E0129E9DEE80047D1D5 /* DateModuleBuilder.swift */,
+			);
+			path = DateViewController;
+			sourceTree = "<group>";
+		};
+		82489E0C29E9DF2D0047D1D5 /* RateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82BE8E4229F5B6A0002DBD08 /* Cells */,
+				82489E1029E9DF500047D1D5 /* RateViewController.swift */,
+				82489E1129E9DF500047D1D5 /* RateInteractor.swift */,
+				82489E0E29E9DF500047D1D5 /* RatePresenter.swift */,
+				82489E0F29E9DF500047D1D5 /* RateRouter.swift */,
+				82489E0D29E9DF500047D1D5 /* RateModuleBuilder.swift */,
+			);
+			path = RateViewController;
+			sourceTree = "<group>";
+		};
+		82489E1729E9DF6C0047D1D5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				822953BF29EABCFD00903562 /* DateServiceProtocol.swift */,
+				82489E1829E9DFB80047D1D5 /* DateService.swift */,
+				82BE8E4B29F5B9BF002DBD08 /* RateServiceProtocol.swift */,
+				82489E1A29E9E0720047D1D5 /* RateService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		827CF9EE29E8978400F4E763 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +145,31 @@
 		827CF9F929E8978400F4E763 /* Exchange Rates */ = {
 			isa = PBXGroup;
 			children = (
-				827CF9FA29E8978400F4E763 /* AppDelegate.swift */,
-				827CF9FC29E8978400F4E763 /* SceneDelegate.swift */,
-				827CF9FE29E8978400F4E763 /* ViewController.swift */,
-				827CFA0029E8978400F4E763 /* Main.storyboard */,
-				827CFA0329E8978500F4E763 /* Assets.xcassets */,
-				827CFA0529E8978500F4E763 /* LaunchScreen.storyboard */,
-				827CFA0829E8978500F4E763 /* Info.plist */,
+				82489E0029E9DE930047D1D5 /* Application */,
+				82489E1729E9DF6C0047D1D5 /* API */,
+				82489E0B29E9DEEF0047D1D5 /* DateViewController */,
+				82489E0C29E9DF2D0047D1D5 /* RateViewController */,
+				82489DFF29E9DE530047D1D5 /* Resources */,
 			);
 			path = "Exchange Rates";
+			sourceTree = "<group>";
+		};
+		82BE8E4129F5B3EA002DBD08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82BE8E4329F5B6CB002DBD08 /* DateTableViewCell.swift */,
+				82BE8E4529F5B6F0002DBD08 /* DateHeaderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		82BE8E4229F5B6A0002DBD08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82BE8E4729F5B71B002DBD08 /* RateTableViewCell.swift */,
+				82BE8E4929F5B749002DBD08 /* RateHeaderCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +188,10 @@
 			dependencies = (
 			);
 			name = "Exchange Rates";
+			packageProductDependencies = (
+				827CFA0F29E897B300F4E763 /* Alamofire */,
+				82489E1D29E9E1350047D1D5 /* SwiftyJSON */,
+			);
 			productName = "Exchange Rates";
 			productReference = 827CF9F729E8978400F4E763 /* Exchange Rates.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 827CF9EE29E8978400F4E763;
+			packageReferences = (
+				827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 827CF9F829E8978400F4E763 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +240,6 @@
 			files = (
 				827CFA0729E8978500F4E763 /* LaunchScreen.storyboard in Resources */,
 				827CFA0429E8978500F4E763 /* Assets.xcassets in Resources */,
-				827CFA0229E8978400F4E763 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +250,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827CF9FF29E8978400F4E763 /* ViewController.swift in Sources */,
+				82BE8E4429F5B6CB002DBD08 /* DateTableViewCell.swift in Sources */,
+				82489E1B29E9E0720047D1D5 /* RateService.swift in Sources */,
+				82489E1329E9DF500047D1D5 /* RatePresenter.swift in Sources */,
+				82BE8E4829F5B71B002DBD08 /* RateTableViewCell.swift in Sources */,
+				82BE8E4A29F5B749002DBD08 /* RateHeaderCell.swift in Sources */,
+				82489E0A29E9DEE80047D1D5 /* DateInteractor.swift in Sources */,
+				82489E0829E9DEE80047D1D5 /* DateRouter.swift in Sources */,
+				82489E1929E9DFB80047D1D5 /* DateService.swift in Sources */,
+				82BE8E4C29F5B9BF002DBD08 /* RateServiceProtocol.swift in Sources */,
+				82BE8E4629F5B6F0002DBD08 /* DateHeaderCell.swift in Sources */,
+				82489E0629E9DEE80047D1D5 /* DateModuleBuilder.swift in Sources */,
+				82489E1529E9DF500047D1D5 /* RateViewController.swift in Sources */,
+				82489E1629E9DF500047D1D5 /* RateInteractor.swift in Sources */,
+				82489E1429E9DF500047D1D5 /* RateRouter.swift in Sources */,
+				82489E0729E9DEE80047D1D5 /* DatePresenter.swift in Sources */,
 				827CF9FB29E8978400F4E763 /* AppDelegate.swift in Sources */,
-				827CF9FD29E8978400F4E763 /* SceneDelegate.swift in Sources */,
+				822953C029EABCFD00903562 /* DateServiceProtocol.swift in Sources */,
+				82489E1229E9DF500047D1D5 /* RateModuleBuilder.swift in Sources */,
+				82AF958B29EFC7E20011B9BF /* DateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		827CFA0029E8978400F4E763 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				827CFA0129E8978400F4E763 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		827CFA0529E8978500F4E763 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +409,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3V35N9JX9X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exchange Rates/Info.plist";
+				INFOPLIST_FILE = "Exchange Rates/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +425,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +438,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3V35N9JX9X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exchange Rates/Info.plist";
+				INFOPLIST_FILE = "Exchange Rates/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +480,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82489E1D29E9E1350047D1D5 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		827CFA0F29E897B300F4E763 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 827CF9EF29E8978400F4E763 /* Project object */;
 }
