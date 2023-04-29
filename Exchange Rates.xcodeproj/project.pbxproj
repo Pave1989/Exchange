@@ -20,6 +20,9 @@
 		82489E1929E9DFB80047D1D5 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1829E9DFB80047D1D5 /* DateService.swift */; };
 		82489E1B29E9E0720047D1D5 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1A29E9E0720047D1D5 /* RateService.swift */; };
 		82489E1E29E9E1350047D1D5 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 82489E1D29E9E1350047D1D5 /* SwiftyJSON */; };
+		827B4F6829F9B05900E36BF5 /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6729F9B05900E36BF5 /* MoneyModel.swift */; };
+		827B4F6A29F9B0FE00E36BF5 /* RateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6929F9B0FE00E36BF5 /* RateConfig.swift */; };
+		827B4F6D29F9B43700E36BF5 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6C29F9B43700E36BF5 /* NetworkingError.swift */; };
 		827CF9FB29E8978400F4E763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF9FA29E8978400F4E763 /* AppDelegate.swift */; };
 		827CFA0429E8978500F4E763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827CFA0329E8978500F4E763 /* Assets.xcassets */; };
 		827CFA0729E8978500F4E763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827CFA0529E8978500F4E763 /* LaunchScreen.storyboard */; };
@@ -45,6 +48,9 @@
 		82489E1129E9DF500047D1D5 /* RateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInteractor.swift; sourceTree = "<group>"; };
 		82489E1829E9DFB80047D1D5 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		82489E1A29E9E0720047D1D5 /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
+		827B4F6729F9B05900E36BF5 /* MoneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModel.swift; sourceTree = "<group>"; };
+		827B4F6929F9B0FE00E36BF5 /* RateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateConfig.swift; sourceTree = "<group>"; };
+		827B4F6C29F9B43700E36BF5 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		827CF9F729E8978400F4E763 /* Exchange Rates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Rates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827CF9FA29E8978400F4E763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827CFA0329E8978500F4E763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,12 +124,39 @@
 		82489E1729E9DF6C0047D1D5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				827B4F6B29F9B42400E36BF5 /* Errors */,
+				827B4F6629F9AFFE00E36BF5 /* Services */,
+				827B4F6529F9AFF200E36BF5 /* Models */,
 				822953BF29EABCFD00903562 /* DateServiceProtocol.swift */,
 				82489E1829E9DFB80047D1D5 /* DateService.swift */,
 				82BE8E4B29F5B9BF002DBD08 /* RateServiceProtocol.swift */,
 				82489E1A29E9E0720047D1D5 /* RateService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		827B4F6529F9AFF200E36BF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				827B4F6729F9B05900E36BF5 /* MoneyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		827B4F6629F9AFFE00E36BF5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				827B4F6929F9B0FE00E36BF5 /* RateConfig.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		827B4F6B29F9B42400E36BF5 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				827B4F6C29F9B43700E36BF5 /* NetworkingError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		827CF9EE29E8978400F4E763 = {
@@ -250,7 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827B4F6829F9B05900E36BF5 /* MoneyModel.swift in Sources */,
 				82BE8E4429F5B6CB002DBD08 /* DateTableViewCell.swift in Sources */,
+				827B4F6D29F9B43700E36BF5 /* NetworkingError.swift in Sources */,
 				82489E1B29E9E0720047D1D5 /* RateService.swift in Sources */,
 				82489E1329E9DF500047D1D5 /* RatePresenter.swift in Sources */,
 				82BE8E4829F5B71B002DBD08 /* RateTableViewCell.swift in Sources */,
@@ -269,6 +304,7 @@
 				822953C029EABCFD00903562 /* DateServiceProtocol.swift in Sources */,
 				82489E1229E9DF500047D1D5 /* RateModuleBuilder.swift in Sources */,
 				82AF958B29EFC7E20011B9BF /* DateViewController.swift in Sources */,
+				827B4F6A29F9B0FE00E36BF5 /* RateConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

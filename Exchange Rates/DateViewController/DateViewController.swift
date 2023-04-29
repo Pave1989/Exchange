@@ -15,12 +15,13 @@ protocol DateViewProtocol: AnyObject {
 class DateViewController: UITableViewController {
     
     var presenter: DatePresenterProtocol?
+    private var dateData: [String] = []
     private let backgroundColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
-    private var dateData: [String] = [] //локальное свойство - пустой масссив типа string
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         presenter?.viewDidLoaded()
         view.backgroundColor = backgroundColor
         tableView.register(DateTableViewCell.self, forCellReuseIdentifier: DateTableViewCell.cellID)
@@ -51,13 +52,21 @@ class DateViewController: UITableViewController {
             return cell
         }
         
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             presenter?.didTapCell()
+        
+        let date1 = dateData[indexPath.row]
+        presenter?.dateData(date: date1)
+        
         }
         
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 40
         }
+}
+
+func getIndexFromArray() {
+    
 }
 extension DateViewController: DateViewProtocol {
     

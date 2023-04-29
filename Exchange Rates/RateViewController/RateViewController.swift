@@ -10,18 +10,27 @@ import UIKit
 protocol RateViewProtocol: AnyObject {
     
     //Presenter -> View
+    func showDate(date: String)
+    func showUSD(money: Double)
+    func showEUR(money: Double)
 }
 
 class RateViewController: UITableViewController {
     
     // MARK: - Public
     var presenter: RatePresenterProtocol?
+    private var headerLabel: String = ""
+    
     private let backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-    private var moneyArray = ["USD", "EUR"]
+    
+    private var moneyArray: [String] = []
+    private var rateArray: [Double] = []
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter?.viewDidLoaded()
         
         view.backgroundColor = backgroundColor
         tableView.register(RateTableViewCell.self, forCellReuseIdentifier: RateTableViewCell.cellID)
@@ -30,6 +39,8 @@ class RateViewController: UITableViewController {
     //MARK: - HEADER
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: RateHeaderCell.headerID) as! RateHeaderCell
+        let textValue = headerLabel
+        header.titleLabel.text = "Курс на дату: \(textValue)"
         return header
     }
     
@@ -38,14 +49,14 @@ class RateViewController: UITableViewController {
     }
     //MARK: - CELL
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        moneyArray.count
+        rateArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RateTableViewCell.cellID, for: indexPath) as! RateTableViewCell
-        let textValue = moneyArray[indexPath.row]
-        cell.moneyLabel.text = textValue
+        let textValue = rateArray[indexPath.row]
+        cell.moneyLabel.text = String(textValue)
         return cell
     }
         
@@ -56,5 +67,15 @@ class RateViewController: UITableViewController {
 
 // MARK: - RateViewProtocol
 extension RateViewController: RateViewProtocol {
- 
+    func showUSD(money: Double) {
+        rateArray.append(money)
     }
+    
+    func showEUR(money: Double) {
+        rateArray.append(money)
+    }
+
+    func showDate(date: String) {
+        self.headerLabel = date
+    }
+}

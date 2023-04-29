@@ -8,8 +8,8 @@
 import UIKit
 
 class RateModuleBuilder {
-    static func build() -> RateViewController {
-        let interactor = RateInteractor()
+    static func build(date: String) -> RateViewController {
+        let interactor = RateInteractor(date: date)
         let router = RateRouter()
         let presenter = RatePresenter(interactor: interactor, router: router)
         let viewController = RateViewController()

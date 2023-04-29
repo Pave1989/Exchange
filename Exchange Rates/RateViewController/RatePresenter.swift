@@ -6,7 +6,11 @@
 //
 
 protocol RatePresenterProtocol: AnyObject {
+    
     //View -> Presenter
+    func viewDidLoaded()
+    func didLoadUSD(usd: Double?)
+    func didLoadEUR(eur: Double?)
 }
 
 class RatePresenter {
@@ -21,4 +25,20 @@ class RatePresenter {
 }
 
 extension RatePresenter: RatePresenterProtocol {
+    func didLoadUSD(usd: Double?) {
+        let money = usd
+        view?.showUSD(money: money ?? 0.0)
+    }
+    
+    func didLoadEUR(eur: Double?) {
+        let money = eur
+        view?.showUSD(money: money ?? 0.0)
+    }
+    
+    
+    func viewDidLoaded() {
+        let date = interactor.getCurrentDate()
+        view?.showDate(date: date ?? "0000-00-00")
+    }
 }
+
