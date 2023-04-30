@@ -20,24 +20,27 @@ class RateViewController: UITableViewController {
     // MARK: - Public
     var presenter: RatePresenterProtocol?
     private var headerLabel: String = ""
-    
-    private let backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-    
     private var moneyArray: [String] = []
     private var rateArray: [Double] = []
     
+    private enum UIConstants {
+        
+        static let colorBackgroundView: UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        static let heightForHeaderInSection: CGFloat = 80
+        static let heightForRowAt: CGFloat = 40
+    }
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter?.viewDidLoaded()
-        
-        view.backgroundColor = backgroundColor
+        view.backgroundColor = UIConstants.colorBackgroundView
         tableView.register(RateTableViewCell.self, forCellReuseIdentifier: RateTableViewCell.cellID)
         tableView.register(RateHeaderCell.self, forHeaderFooterViewReuseIdentifier: RateHeaderCell.headerID)
     }
     //MARK: - HEADER
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: RateHeaderCell.headerID) as! RateHeaderCell
         let textValue = headerLabel
         header.titleLabel.text = "Курс на дату: \(textValue)"
@@ -45,10 +48,12 @@ class RateViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        80
+        
+        return UIConstants.heightForHeaderInSection
     }
     //MARK: - CELL
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         rateArray.count
     }
     
@@ -61,7 +66,7 @@ class RateViewController: UITableViewController {
     }
         
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        40
+        return UIConstants.heightForRowAt
     }
 }
 

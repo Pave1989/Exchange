@@ -16,27 +16,33 @@ class DateViewController: UITableViewController {
     
     var presenter: DatePresenterProtocol?
     private var dateData: [String] = []
-    private let backgroundColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
     
+    private enum UIConstants {
+        
+        static let colorBackgroundView: UIColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+        static let heightForHeaderInSection: CGFloat = 80
+        static let heightForRowAt: CGFloat = 40
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         presenter?.viewDidLoaded()
-        view.backgroundColor = backgroundColor
+        view.backgroundColor = UIConstants.colorBackgroundView
         tableView.register(DateTableViewCell.self, forCellReuseIdentifier: DateTableViewCell.cellID)
         tableView.register(DateHeaderCell.self, forHeaderFooterViewReuseIdentifier: DateHeaderCell.headerID)
         tableView.contentInsetAdjustmentBehavior = .never
     }
+    
     //MARK: - HEADER
         override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DateHeaderCell.headerID) as! DateHeaderCell
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DateHeaderCell.headerID) as! DateHeaderCell
             return header
         }
         
         override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 80
+            return UIConstants.heightForHeaderInSection
         }
     //MARK: - CELL
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,21 +59,18 @@ class DateViewController: UITableViewController {
         }
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            presenter?.didTapCell()
         
+        presenter?.didTapCell()
         let date1 = dateData[indexPath.row]
         presenter?.dateData(date: date1)
-        
         }
         
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 40
+            
+            return UIConstants.heightForRowAt
         }
 }
 
-func getIndexFromArray() {
-    
-}
 extension DateViewController: DateViewProtocol {
     
     func showDate(date: [String]) {
