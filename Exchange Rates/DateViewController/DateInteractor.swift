@@ -20,8 +20,12 @@ class DateInteractor: DateInteractorProtocol {
     weak var presenter: DatePresenterProtocol?
     //сильная ссылка на сервис
     let datesServise = DateService()
-    var date: String = "0000-00-00"
+    var date: String = ""
     
+//    init(date: String){
+//        self.date = date
+//    }
+    //здесь разобраться
     func loadDate1(date: String) {
         self.date = date
     }

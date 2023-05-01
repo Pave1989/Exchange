@@ -25,6 +25,7 @@ class RatePresenter {
 }
 
 extension RatePresenter: RatePresenterProtocol {
+    
     func didLoadUSD(usd: Double?) {
         let money = usd
         view?.showUSD(money: money ?? 0.0)
@@ -34,11 +35,10 @@ extension RatePresenter: RatePresenterProtocol {
         let money = eur
         view?.showUSD(money: money ?? 0.0)
     }
-    
-    
+ 
     func viewDidLoaded() {
         let date = interactor.getCurrentDate()
-        view?.showDate(date: date ?? "0000-00-00")
+        view?.showDate(date: date)
     }
 }
 

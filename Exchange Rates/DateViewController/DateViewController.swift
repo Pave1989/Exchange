@@ -53,16 +53,15 @@ class DateViewController: UITableViewController {
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: DateTableViewCell.cellID, for: indexPath) as! DateTableViewCell
-            let textValue = dateData[indexPath.row] //конкретный элемент из массива соответствующий строке
+            let textValue = dateData[indexPath.row] 
             cell.dateLabel.text = textValue
             return cell
         }
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        presenter?.didTapCell()
         let date1 = dateData[indexPath.row]
-        presenter?.dateData(date: date1)
+        presenter?.didTapCell(date1: date1)
         }
         
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -8,7 +8,7 @@
 protocol RateInteractorProtocol: AnyObject {
     
     //Presenter -> Interactor
-    func getCurrentDate() -> String?
+    func getCurrentDate() -> String
     func loadRate()
     var modelEUR: MoneyModel? { get set }
     var modelUSD: MoneyModel? { get set }
@@ -47,12 +47,12 @@ class RateInteractor: RateInteractorProtocol {
             case .failure(let fail):
                 print(fail)
             }
-            self.presenter?.didLoadUSD(usd: self.rateUSD)
             self.presenter?.didLoadEUR(eur: self.rateEUR)
         }
     }
     
-    func getCurrentDate() -> String? {
-        return date
+    func getCurrentDate() -> String {
+        let date1 = date
+        return date1
     }
 }

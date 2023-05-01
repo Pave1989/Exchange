@@ -19,7 +19,7 @@ class RateViewController: UITableViewController {
     
     // MARK: - Public
     var presenter: RatePresenterProtocol?
-    private var headerLabel: String = ""
+    var headerLabel: String = ""
     private var moneyArray: [String] = []
     private var rateArray: [Double] = []
     
@@ -32,8 +32,9 @@ class RateViewController: UITableViewController {
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter?.viewDidLoaded()
+  
+            presenter?.viewDidLoaded()
+
         view.backgroundColor = UIConstants.colorBackgroundView
         tableView.register(RateTableViewCell.self, forCellReuseIdentifier: RateTableViewCell.cellID)
         tableView.register(RateHeaderCell.self, forHeaderFooterViewReuseIdentifier: RateHeaderCell.headerID)
@@ -82,5 +83,6 @@ extension RateViewController: RateViewProtocol {
 
     func showDate(date: String) {
         self.headerLabel = date
+        self.tableView.reloadData()
     }
 }

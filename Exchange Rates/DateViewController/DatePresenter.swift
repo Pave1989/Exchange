@@ -11,9 +11,8 @@ protocol DatePresenterProtocol: AnyObject {
     
     //View -> Presenter
     func viewDidLoaded() //загрузился вью контроллер
-    func didLoad(dates: [String]?) //загрузились даты
-    func didTapCell()
-    func dateData(date: String)
+    func didLoad(dates: [String]) //загрузились даты
+    func didTapCell(date1: String)
 }
 
 class DatePresenter {
@@ -35,17 +34,13 @@ extension DatePresenter: DatePresenterProtocol {
         interactor.loadDate()
     }
     
-    func didLoad(dates: [String]?) {
+    func didLoad(dates: [String]) {
         
-        view?.showDate(date: dates ?? [])
+        view?.showDate(date: dates )
     }
     
-    func didTapCell() {
-        let date = interactor.date
-        router.openRate(for: date)
-    }
-    
-    func dateData(date: String) {
-        interactor.loadDate1(date: date)
+    func didTapCell(date1: String) {
+
+        router.openRate(for: date1)
     }
 }
