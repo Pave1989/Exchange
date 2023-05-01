@@ -19,7 +19,6 @@
 		82489E1629E9DF500047D1D5 /* RateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1129E9DF500047D1D5 /* RateInteractor.swift */; };
 		82489E1929E9DFB80047D1D5 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1829E9DFB80047D1D5 /* DateService.swift */; };
 		82489E1B29E9E0720047D1D5 /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82489E1A29E9E0720047D1D5 /* RateService.swift */; };
-		82489E1E29E9E1350047D1D5 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 82489E1D29E9E1350047D1D5 /* SwiftyJSON */; };
 		827B4F6829F9B05900E36BF5 /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6729F9B05900E36BF5 /* MoneyModel.swift */; };
 		827B4F6A29F9B0FE00E36BF5 /* RateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6929F9B0FE00E36BF5 /* RateConfig.swift */; };
 		827B4F6D29F9B43700E36BF5 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827B4F6C29F9B43700E36BF5 /* NetworkingError.swift */; };
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82489E1E29E9E1350047D1D5 /* SwiftyJSON in Frameworks */,
 				827CFA1029E897B300F4E763 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +221,6 @@
 			name = "Exchange Rates";
 			packageProductDependencies = (
 				827CFA0F29E897B300F4E763 /* Alamofire */,
-				82489E1D29E9E1350047D1D5 /* SwiftyJSON */,
 			);
 			productName = "Exchange Rates";
 			productReference = 827CF9F729E8978400F4E763 /* Exchange Rates.app */;
@@ -255,7 +252,6 @@
 			mainGroup = 827CF9EE29E8978400F4E763;
 			packageReferences = (
 				827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 827CF9F829E8978400F4E763 /* Products */;
 			projectDirPath = "";
@@ -518,14 +514,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -537,11 +525,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		82489E1D29E9E1350047D1D5 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 82489E1C29E9E1350047D1D5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
 		827CFA0F29E897B300F4E763 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 827CFA0E29E897B300F4E763 /* XCRemoteSwiftPackageReference "Alamofire" */;
