@@ -75,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822D36562A018D9E002212AD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				827B4F6629F9AFFE00E36BF5 /* Services */,
+				827B4F6B29F9B42400E36BF5 /* Errors */,
+				827B4F6529F9AFF200E36BF5 /* Models */,
+				82489E1729E9DF6C0047D1D5 /* API */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		82489DFF29E9DE530047D1D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +133,6 @@
 		82489E1729E9DF6C0047D1D5 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				827B4F6B29F9B42400E36BF5 /* Errors */,
-				827B4F6629F9AFFE00E36BF5 /* Services */,
-				827B4F6529F9AFF200E36BF5 /* Models */,
 				822953BF29EABCFD00903562 /* DateServiceProtocol.swift */,
 				82489E1829E9DFB80047D1D5 /* DateService.swift */,
 				82BE8E4B29F5B9BF002DBD08 /* RateServiceProtocol.swift */,
@@ -177,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				82489E0029E9DE930047D1D5 /* Application */,
-				82489E1729E9DF6C0047D1D5 /* API */,
+				822D36562A018D9E002212AD /* Entity */,
 				82489E0B29E9DEEF0047D1D5 /* DateViewController */,
 				82489E0C29E9DF2D0047D1D5 /* RateViewController */,
 				82489DFF29E9DE530047D1D5 /* Resources */,

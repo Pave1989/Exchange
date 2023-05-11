@@ -7,16 +7,16 @@
 
 protocol DateRouterProtocol: AnyObject {
     
-    func openRate(for date: String)
+    func openRate(for dateVC: String)
 }
 
 class DateRouter: DateRouterProtocol {
     
     weak var viewController: DateViewController?
     
-    func openRate(for date: String) {
+    func openRate(for dateVC: String) {
         
-        let vc = RateModuleBuilder.build(date: date)
+        let vc = RateModuleBuilder.build(dateVC: dateVC)
         
         viewController?.present(vc, animated: true, completion: nil)
     }

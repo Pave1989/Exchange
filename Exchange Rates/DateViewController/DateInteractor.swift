@@ -22,12 +22,9 @@ class DateInteractor: DateInteractorProtocol {
     let datesServise = DateService()
     var date: String = ""
     
-//    init(date: String){
-//        self.date = date
-//    }
-    //здесь разобраться
     func loadDate1(date: String) {
         self.date = date
+        
     }
     
     func loadDate() {
@@ -35,5 +32,5 @@ class DateInteractor: DateInteractorProtocol {
         datesServise.getData { [weak self] date in
             self?.presenter?.didLoad(dates: date)
         }
-  }
+    }
 }

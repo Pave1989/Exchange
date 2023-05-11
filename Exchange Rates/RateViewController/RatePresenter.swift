@@ -9,16 +9,18 @@ protocol RatePresenterProtocol: AnyObject {
     
     //View -> Presenter
     func viewDidLoaded()
-    func didLoadUSD(usd: Double?)
-    func didLoadEUR(eur: Double?)
+    func didLoadUSD(usdResult: Double)
+    func didLoadEUR(eurResult: Double)
 }
 
 class RatePresenter {
+    
     weak var view: RateViewProtocol?
     var router: RateRouterProtocol
     var interactor: RateInteractorProtocol
 
     init(interactor: RateInteractorProtocol, router: RateRouterProtocol) {
+        
         self.interactor = interactor
         self.router = router
     }
@@ -26,17 +28,20 @@ class RatePresenter {
 
 extension RatePresenter: RatePresenterProtocol {
     
-    func didLoadUSD(usd: Double?) {
-        let money = usd
-        view?.showUSD(money: money ?? 0.0)
+    func didLoadUSD(usdResult: Double) {
+        
+        view?.showUSD(usd: usdResult)
     }
     
-    func didLoadEUR(eur: Double?) {
-        let money = eur
-        view?.showUSD(money: money ?? 0.0)
+    func didLoadEUR(eurResult: Double) {
+        
+        view?.showEUR(eur: eurResult)
     }
  
     func viewDidLoaded() {
+        
+        interactor.loadEuro()
+        interactor.loadDollar()
         let date = interactor.getCurrentDate()
         view?.showDate(date: date)
     }

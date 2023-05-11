@@ -7,52 +7,61 @@
 
 protocol RateInteractorProtocol: AnyObject {
     
-    //Presenter -> Interactor
+//Presenter -> Interactor
     func getCurrentDate() -> String
-    func loadRate()
-    var modelEUR: MoneyModel? { get set }
-    var modelUSD: MoneyModel? { get set }
+    func loadDollar()
+    func loadEuro()
 }
 
 class RateInteractor: RateInteractorProtocol {
+    
     weak var presenter: RatePresenterProtocol?
     let rateService = RateService()
-    var date: String
-    var modelEUR: MoneyModel?
-    var modelUSD: MoneyModel?
-    var rateUSD: Double = 0.0
-    var rateEUR: Double = 0.0
+    var dateVC: String
     
-    init(date: String){
-        self.date = date
+    init(dateVC: String){
+        self.dateVC = dateVC //String(dateVC.reversed())
     }
-    //сюда залетают модели надо распарсить здесь их
-    //желательно передать модели
-    func loadRate() {
-        rateService.getUSD(date: date) {  dateUSD in
+    
+    func loadDollar() {
+ 
+        rateService.getUSD(date1: dateVC) {  [weak self] dateUSD in
+            
             switch dateUSD {
             case .success(let model):
-                self.modelUSD = model
-                self.rateUSD = model!.rates.RUB
-            case .failure(let fail):
-                print(fail)
+                guard let dollar = model?.data?.rub?.value else {
+                    print(NetworkingError.invalidData)
+                    return
+                }
+                self?.presenter?.didLoadUSD(usdResult: dollar)
+//                print(model)
+            case .failure(let error):
+                print(error)
             }
-            self.presenter?.didLoadUSD(usd: self.rateUSD)
         }
-        rateService.getEUR(date: date) {  dateEUR in
+    }
+    
+    func loadEuro() {
+        
+        rateService.getEUR(date1: dateVC) { [weak self] dateEUR in
+            
             switch dateEUR {
             case .success(let model):
-                self.modelUSD = model
-                self.rateUSD = model!.rates.RUB
-            case .failure(let fail):
-                print(fail)
+                guard let euro = model?.data?.rub?.value else {
+                    print(NetworkingError.invalidData)
+                    return
+                }
+                self?.presenter?.didLoadUSD(usdResult: euro)
+//                print(model)
+            case .failure(let error):
+                print(error)
             }
-            self.presenter?.didLoadEUR(eur: self.rateEUR)
         }
     }
     
     func getCurrentDate() -> String {
-        let date1 = date
-        return date1
+        
+        let dateVC = dateVC
+        return dateVC
     }
 }

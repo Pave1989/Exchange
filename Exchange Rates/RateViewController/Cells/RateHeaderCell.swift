@@ -27,6 +27,7 @@ class RateHeaderCell: UITableViewHeaderFooterView {
         titleLabel.textAlignment = .left
         titleLabel.text = "Курс валют:"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        titleLabel.adjustsFontSizeToFitWidth = true
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true

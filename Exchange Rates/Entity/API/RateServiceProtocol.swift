@@ -8,6 +8,6 @@
 import Foundation
 
 protocol RateServiceProtocol {
-    func getUSD(date: String, complition: @escaping (Result<MoneyModel?, Error>) -> Void)
-    func getEUR(date: String, complition: @escaping (Result<MoneyModel?, Error>) -> Void)
+    func getUSD(date1: String,completion: @escaping (Result<MoneyModel?, Error>) -> Void)
+    func getEUR(date1: String, completion: @escaping (Result<MoneyModel?, Error>) -> Void)
 }

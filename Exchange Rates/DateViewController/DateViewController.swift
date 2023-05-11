@@ -8,7 +8,8 @@
 import UIKit
 
 protocol DateViewProtocol: AnyObject {
-    //Presenter -> View
+    
+//Presenter -> View
     func showDate(date:[String])
 }
 
@@ -34,20 +35,22 @@ class DateViewController: UITableViewController {
         tableView.contentInsetAdjustmentBehavior = .never
     }
     
-    //MARK: - HEADER
+//MARK: - HEADER
         override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DateHeaderCell.headerID) as! DateHeaderCell
+            
             return header
         }
         
         override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            
             return UIConstants.heightForHeaderInSection
         }
-    //MARK: - CELL
+//MARK: - CELL
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
-            dateData.count //число элементов в массиве
+            dateData.count
         }
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,8 +63,8 @@ class DateViewController: UITableViewController {
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let date1 = dateData[indexPath.row]
-        presenter?.didTapCell(date1: date1)
+        let dateTap = dateData[indexPath.row]
+        presenter?.didTapCell(dateTap: dateTap)
         }
         
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,6 +76,7 @@ class DateViewController: UITableViewController {
 extension DateViewController: DateViewProtocol {
     
     func showDate(date: [String]) {
+        
         self.dateData = date
         self.tableView.reloadData()
     }

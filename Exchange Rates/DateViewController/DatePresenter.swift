@@ -12,7 +12,7 @@ protocol DatePresenterProtocol: AnyObject {
     //View -> Presenter
     func viewDidLoaded() //загрузился вью контроллер
     func didLoad(dates: [String]) //загрузились даты
-    func didTapCell(date1: String)
+    func didTapCell(dateTap: String)
 }
 
 class DatePresenter {
@@ -39,8 +39,8 @@ extension DatePresenter: DatePresenterProtocol {
         view?.showDate(date: dates )
     }
     
-    func didTapCell(date1: String) {
+    func didTapCell(dateTap: String) {
 
-        router.openRate(for: date1)
+        router.openRate(for: dateTap)
     }
 }

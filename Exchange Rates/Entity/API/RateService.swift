@@ -10,55 +10,58 @@ import Alamofire
 
 class RateService: RateServiceProtocol {
     
-    private let key = "NBalX1Apt2VWsATt8W4a0jygLUm46Ji4"
-//    //MARK: - decoder
-//    private let decoder: JSONDecoder = {
-//       let decoder = JSONDecoder()
-//       decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        return decoder
-//    }()
-    
-    func getUSD(date: String, complition: @escaping (Result<MoneyModel?, Error>) -> Void) {
+    private enum NeedCurrency {
         
-        var reqest = URLRequest(url: URL(string: "https://api.apilayer.com/fixer/\(date)?symbols=RUB&base=USD")!, timeoutInterval: Double.infinity)
-        reqest.httpMethod = "GET"
-        reqest.addValue(key, forHTTPHeaderField: "apikey")
-        
-        let task = URLSession.shared.dataTask(with: reqest) { data, response, error in
-            
-            guard let data = data else {
-                print(String(describing: error))
-                return
-            }
-            guard let dollarResult = try? JSONDecoder().decode(MoneyModel.self, from: data)
-            else {
-                complition(.failure(NetworkingError.invalidData))
-                return
-            }
-            complition(.success(dollarResult))
-        }
-        task.resume()
+        static let rubles = "RUB"
+        static let dollar = "USD"
+        static let euro = "EUR"
     }
+    private let baseURL = "https://api.currencyapi.com/v3/historical"
+    private let key = "cqqIFRgNnIcTr8MA77R6nG709YbLr1Mxumy3UNUV"
+//    private let headers: HTTPHeaders = ["apikey": "NBalX1Apt2VWsATt8W4a0jygLUm46Ji4"]
     
-    func getEUR(date: String, complition: @escaping (Result<MoneyModel?, Error>) -> Void) {
+//MARK: - decoder
+    private let decoder: JSONDecoder = {
+       let decoder = JSONDecoder()
+       decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
     
-    var reqest = URLRequest(url: URL(string: "https://api.apilayer.com/fixer/\(date)?symbols=RUB&base=EUR")!, timeoutInterval: Double.infinity)
-    reqest.httpMethod = "GET"
-    reqest.addValue(key, forHTTPHeaderField: "apikey")
-    
-    let task = URLSession.shared.dataTask(with: reqest) { data, response, error in
-        
-        guard let data = data else {
-            print(String(describing: error))
-            return
+//MARK: Get Dollar
+    func getUSD(date1: String,completion: @escaping (Result<MoneyModel?, Error>) -> Void) {
+
+        let parameters = ["apikey": key,
+                        "date": date1,
+                        "base_currency": NeedCurrency.dollar,
+                        "currencies": NeedCurrency.rubles
+        ]
+        AF.request(baseURL, method: .get, parameters: parameters).responseDecodable(of: MoneyModel.self, decoder: decoder) { response in
+
+            switch response.result {
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let error):
+                print(error)
         }
-        guard let euroResult = try? JSONDecoder().decode(MoneyModel.self, from: data)
-        else {
-            complition(.failure(NetworkingError.invalidData))
-            return
-        }
-        complition(.success(euroResult))
     }
-    task.resume()
- }
+}
+    
+//MARK: Get Euro
+    func getEUR(date1: String, completion: @escaping (Result<MoneyModel?, Error>) -> Void) {
+        
+        let parameters = ["apikey": key,
+                        "date": date1,
+                        "base_currency": NeedCurrency.euro,
+                        "currencies": NeedCurrency.rubles
+        ]
+        AF.request(baseURL, method: .get, parameters: parameters).responseDecodable(of: MoneyModel.self, decoder: decoder) { response in
+
+            switch response.result {
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let error):
+                print(error)
+        }
+     }
+  }
 }

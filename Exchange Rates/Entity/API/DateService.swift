@@ -17,7 +17,8 @@ class DateService: DateServiceProtocol {
         dateFormater.timeStyle = DateFormatter.Style.none
         let gmtTimeZone = TimeZone(abbreviation: "GMT")
         dateFormater.timeZone = gmtTimeZone
-        dateFormater.dateFormat = "dd-MM-yyyy"
+        dateFormater.dateFormat = "yyyy-MM-dd"
+//        dateFormater.dateFormat = "dd-MM-yyyy"
 
         var dates = [String]() //массив хранения дат
 

@@ -9,18 +9,21 @@ import UIKit
 
 protocol RateViewProtocol: AnyObject {
     
-    //Presenter -> View
+//Presenter -> View
     func showDate(date: String)
-    func showUSD(money: Double)
-    func showEUR(money: Double)
+    func showUSD(usd: Double)
+    func showEUR(eur: Double)
 }
 
 class RateViewController: UITableViewController {
     
-    // MARK: - Public
+    var modelUSD: MoneyModel?
+//    var usdString: Double
+//    var eurString: Double
+// MARK: - Public
     var presenter: RatePresenterProtocol?
     var headerLabel: String = ""
-    private var moneyArray: [String] = []
+    private var moneyArray: [String] = ["Доллар", "Евро"]
     private var rateArray: [Double] = []
     
     private enum UIConstants {
@@ -29,7 +32,7 @@ class RateViewController: UITableViewController {
         static let heightForHeaderInSection: CGFloat = 80
         static let heightForRowAt: CGFloat = 40
     }
-    // MARK: - View lifecycle
+// MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -39,12 +42,13 @@ class RateViewController: UITableViewController {
         tableView.register(RateTableViewCell.self, forCellReuseIdentifier: RateTableViewCell.cellID)
         tableView.register(RateHeaderCell.self, forHeaderFooterViewReuseIdentifier: RateHeaderCell.headerID)
     }
-    //MARK: - HEADER
+//MARK: - HEADER
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: RateHeaderCell.headerID) as! RateHeaderCell
         let textValue = headerLabel
-        header.titleLabel.text = "Курс на дату: \(textValue)"
+        header.titleLabel.text = "Курс рубля на дату: \(textValue)"
+        
         return header
     }
     
@@ -52,36 +56,46 @@ class RateViewController: UITableViewController {
         
         return UIConstants.heightForHeaderInSection
     }
-    //MARK: - CELL
+//MARK: - CELL
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        rateArray.count
+        moneyArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RateTableViewCell.cellID, for: indexPath) as! RateTableViewCell
-        let textValue = rateArray[indexPath.row]
-        cell.moneyLabel.text = String(textValue)
+        print(rateArray)
+//MARK: - подставить сюда занчения!
+        let textValue = 80.012
+        cell.moneyLabel.text = "\(moneyArray[indexPath.row]) \(textValue)"
+        
         return cell
     }
         
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return UIConstants.heightForRowAt
     }
 }
 
-// MARK: - RateViewProtocol
 extension RateViewController: RateViewProtocol {
-    func showUSD(money: Double) {
-        rateArray.append(money)
+    
+    func showUSD(usd: Double) {
+        print(usd)
+//        self.usdString = usd ?? 01.01
+        rateArray.append(usd)
+//        self.tableView.reloadData()
     }
     
-    func showEUR(money: Double) {
-        rateArray.append(money)
+    func showEUR(eur: Double) {
+        print(eur)
+//        self.eurString = eur ?? 02.02
+        rateArray.append(eur)
+//        self.tableView.reloadData()
     }
 
     func showDate(date: String) {
+        
         self.headerLabel = date
         self.tableView.reloadData()
     }

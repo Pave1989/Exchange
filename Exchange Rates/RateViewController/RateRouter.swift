@@ -6,11 +6,10 @@
 //
 
 protocol RateRouterProtocol {
-
+    
 }
 
 class RateRouter: RateRouterProtocol {
     
     weak var viewController: RateViewController?
-    
 }
