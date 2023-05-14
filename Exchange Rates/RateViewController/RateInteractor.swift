@@ -5,12 +5,14 @@
 //  Created by Павел Галкин on 14.04.2023
 //
 
+import Foundation
+
 protocol RateInteractorProtocol: AnyObject {
     
 //Presenter -> Interactor
-    func getCurrentDate() -> String
     func loadDollar()
     func loadEuro()
+    var dateVC: String { get }
 }
 
 class RateInteractor: RateInteractorProtocol {
@@ -22,10 +24,24 @@ class RateInteractor: RateInteractorProtocol {
     init(dateVC: String){
         self.dateVC = dateVC //String(dateVC.reversed())
     }
-    
+//MARK: - преобразование даты в нужный формат для API
+    func convertDateFormat(inputDate: String) -> String {
+
+         let olDateFormatter = DateFormatter()
+         olDateFormatter.dateFormat = "dd MMMM yyyy"
+
+         let oldDate = olDateFormatter.date(from: inputDate)
+
+         let convertDateFormatter = DateFormatter()
+         convertDateFormatter.dateFormat = "yyyy-MM-dd"
+         let newDate = convertDateFormatter.string(from: oldDate!)
+        
+        return newDate
+    }
+//MARK: - получение доллара
     func loadDollar() {
- 
-        rateService.getUSD(date1: dateVC) {  [weak self] dateUSD in
+        let convertDate = convertDateFormat(inputDate: dateVC)
+        rateService.getUSD(date1: convertDate) {  [weak self] dateUSD in
             
             switch dateUSD {
             case .success(let model):
@@ -34,16 +50,15 @@ class RateInteractor: RateInteractorProtocol {
                     return
                 }
                 self?.presenter?.didLoadUSD(usdResult: dollar)
-//                print(model)
             case .failure(let error):
                 print(error)
             }
         }
     }
-    
+//MARK: - получение евро
     func loadEuro() {
-        
-        rateService.getEUR(date1: dateVC) { [weak self] dateEUR in
+        let convertDate = convertDateFormat(inputDate: dateVC)
+        rateService.getEUR(date1: convertDate) { [weak self] dateEUR in
             
             switch dateEUR {
             case .success(let model):
@@ -52,16 +67,9 @@ class RateInteractor: RateInteractorProtocol {
                     return
                 }
                 self?.presenter?.didLoadUSD(usdResult: euro)
-//                print(model)
             case .failure(let error):
                 print(error)
             }
         }
-    }
-    
-    func getCurrentDate() -> String {
-        
-        let dateVC = dateVC
-        return dateVC
     }
 }

@@ -20,7 +20,6 @@ class DateViewController: UITableViewController {
     
     private enum UIConstants {
         
-        static let colorBackgroundView: UIColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
         static let heightForHeaderInSection: CGFloat = 80
         static let heightForRowAt: CGFloat = 40
     }
@@ -29,7 +28,7 @@ class DateViewController: UITableViewController {
         super.viewDidLoad()
     
         presenter?.viewDidLoaded()
-        view.backgroundColor = UIConstants.colorBackgroundView
+        
         tableView.register(DateTableViewCell.self, forCellReuseIdentifier: DateTableViewCell.cellID)
         tableView.register(DateHeaderCell.self, forHeaderFooterViewReuseIdentifier: DateHeaderCell.headerID)
         tableView.contentInsetAdjustmentBehavior = .never

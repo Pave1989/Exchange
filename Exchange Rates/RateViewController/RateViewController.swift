@@ -18,17 +18,14 @@ protocol RateViewProtocol: AnyObject {
 class RateViewController: UITableViewController {
     
     var modelUSD: MoneyModel?
-//    var usdString: Double
-//    var eurString: Double
 // MARK: - Public
     var presenter: RatePresenterProtocol?
     var headerLabel: String = ""
     private var moneyArray: [String] = ["Доллар", "Евро"]
-    private var rateArray: [Double] = []
+    private var rateArray: [Double] = [80.33, 90.77]
     
     private enum UIConstants {
         
-        static let colorBackgroundView: UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         static let heightForHeaderInSection: CGFloat = 80
         static let heightForRowAt: CGFloat = 40
     }
@@ -37,8 +34,7 @@ class RateViewController: UITableViewController {
         super.viewDidLoad()
   
             presenter?.viewDidLoaded()
-
-        view.backgroundColor = UIConstants.colorBackgroundView
+        
         tableView.register(RateTableViewCell.self, forCellReuseIdentifier: RateTableViewCell.cellID)
         tableView.register(RateHeaderCell.self, forHeaderFooterViewReuseIdentifier: RateHeaderCell.headerID)
     }
@@ -66,7 +62,7 @@ class RateViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: RateTableViewCell.cellID, for: indexPath) as! RateTableViewCell
         print(rateArray)
 //MARK: - подставить сюда занчения!
-        let textValue = 80.012
+        let textValue = rateArray[indexPath.row]
         cell.moneyLabel.text = "\(moneyArray[indexPath.row]) \(textValue)"
         
         return cell
@@ -83,14 +79,14 @@ extension RateViewController: RateViewProtocol {
     func showUSD(usd: Double) {
         print(usd)
 //        self.usdString = usd ?? 01.01
-        rateArray.append(usd)
+        self.rateArray.append(usd)
 //        self.tableView.reloadData()
     }
     
     func showEUR(eur: Double) {
         print(eur)
 //        self.eurString = eur ?? 02.02
-        rateArray.append(eur)
+        self.rateArray.append(eur)
 //        self.tableView.reloadData()
     }
 

@@ -15,7 +15,7 @@ class DateTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         initializeUI()
     }
     
@@ -27,11 +27,14 @@ class DateTableViewCell: UITableViewCell {
         
  //MARK: - dateLabel
         dateLabel.textAlignment = .center
+        dateLabel.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        dateLabel.layer.masksToBounds = true
+        dateLabel.layer.cornerRadius = 15
         addSubview(dateLabel)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        dateLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        dateLabel.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        dateLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        dateLabel.topAnchor.constraint(equalTo: topAnchor,constant: 5).isActive = true
+        dateLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
+        dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 50).isActive = true
+        dateLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -50).isActive = true
     }
 }

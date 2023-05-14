@@ -14,17 +14,13 @@ class DateService: DateServiceProtocol {
 
         //установка форматы даты
         let dateFormater = DateFormatter()
-        dateFormater.timeStyle = DateFormatter.Style.none
-        let gmtTimeZone = TimeZone(abbreviation: "GMT")
-        dateFormater.timeZone = gmtTimeZone
-        dateFormater.dateFormat = "yyyy-MM-dd"
-//        dateFormater.dateFormat = "dd-MM-yyyy"
+        dateFormater.dateFormat = "dd MMMM yyyy"
 
-        var dates = [String]() //массив хранения дат
+        var dates = [String]() //пустой массив хранения дат
 
         //для операций со сложением/вычитанием времени(дни, месяцы, годы)
         var past = DateComponents()
-        past.year = -1 //за 20 лет
+        past.year = -33 //за 33 года ибо API не поддерживает больший диапазон
 
         var date = Date() //текущая дата
         //для того чтобы указать тип календаря(григарианский или другой)
@@ -32,7 +28,7 @@ class DateService: DateServiceProtocol {
         let lastDate = calendar.date(byAdding: past, to: date)
 
         var dayAgoComponent = DateComponents()
-        dayAgoComponent.day = -1
+        dayAgoComponent.day = -1 //вычитаем по дню
 
         while (date != lastDate) {
             date = calendar.date(byAdding: dayAgoComponent, to: date)!

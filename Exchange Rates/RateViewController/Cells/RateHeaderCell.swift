@@ -33,6 +33,6 @@ class RateHeaderCell: UITableViewHeaderFooterView {
         titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: rightAnchor,constant: -20).isActive = true
     }
 }

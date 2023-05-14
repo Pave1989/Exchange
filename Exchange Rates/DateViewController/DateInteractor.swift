@@ -11,8 +11,6 @@ protocol DateInteractorProtocol: AnyObject {
     
     //Presenter -> Interactor
     func loadDate()
-    func loadDate1(date: String)
-    var date: String { get }
 }
 
 class DateInteractor: DateInteractorProtocol {
@@ -20,12 +18,6 @@ class DateInteractor: DateInteractorProtocol {
     weak var presenter: DatePresenterProtocol?
     //сильная ссылка на сервис
     let datesServise = DateService()
-    var date: String = ""
-    
-    func loadDate1(date: String) {
-        self.date = date
-        
-    }
     
     func loadDate() {
         

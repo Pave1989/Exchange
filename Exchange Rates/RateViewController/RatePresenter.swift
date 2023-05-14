@@ -42,7 +42,7 @@ extension RatePresenter: RatePresenterProtocol {
         
         interactor.loadEuro()
         interactor.loadDollar()
-        let date = interactor.getCurrentDate()
+        let date = interactor.dateVC
         view?.showDate(date: date)
     }
 }
