@@ -13,7 +13,7 @@ protocol DateViewProtocol: AnyObject {
     func showDate(date:[String])
 }
 
-class DateViewController: UITableViewController {
+class DateTableViewController: UITableViewController {
     
     var presenter: DatePresenterProtocol?
     private var dateData: [String] = []
@@ -72,7 +72,7 @@ class DateViewController: UITableViewController {
         }
 }
 
-extension DateViewController: DateViewProtocol {
+extension DateTableViewController: DateViewProtocol {
     
     func showDate(date: [String]) {
         
