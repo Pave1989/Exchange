@@ -7,23 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */; };
+		824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5D2A3F843900D1ECED /* DateService.swift */; };
+		824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */; };
+		824A8B642A3F8F7400D1ECED /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B632A3F8F7400D1ECED /* RateService.swift */; };
+		824A8B672A3F8FAA00D1ECED /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 824A8B662A3F8FAA00D1ECED /* Alamofire */; };
+		824A8B6A2A3F8FD000D1ECED /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B692A3F8FD000D1ECED /* MoneyModel.swift */; };
+		824A8B6E2A3F901C00D1ECED /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B6D2A3F901C00D1ECED /* NetworkingError.swift */; };
+		824A8B712A3F906A00D1ECED /* Rate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824A8B702A3F906A00D1ECED /* Rate.storyboard */; };
+		824A8B732A3F908400D1ECED /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B722A3F908400D1ECED /* RateViewController.swift */; };
+		824A8B752A3F90B500D1ECED /* RateViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B742A3F90B500D1ECED /* RateViewInput.swift */; };
+		824A8B772A3F90C200D1ECED /* RateViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B762A3F90C200D1ECED /* RateViewOutput.swift */; };
+		824A8B7D2A3F9F0400D1ECED /* RateViewInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B7C2A3F9F0400D1ECED /* RateViewInteractorInput.swift */; };
+		824A8B7F2A3F9F1300D1ECED /* RateViewInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B7E2A3F9F1300D1ECED /* RateViewInteractorOutput.swift */; };
+		824A8B812A3F9F2300D1ECED /* RateViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B802A3F9F2300D1ECED /* RateViewInteractor.swift */; };
+		824A8B832A3F9F4F00D1ECED /* RateViewPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B822A3F9F4F00D1ECED /* RateViewPresenterInput.swift */; };
+		824A8B852A3F9F5C00D1ECED /* RateViewPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B842A3F9F5C00D1ECED /* RateViewPresenterOutput.swift */; };
+		824A8B872A3F9F6A00D1ECED /* RateViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B862A3F9F6A00D1ECED /* RateViewPresenter.swift */; };
+		824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */; };
+		824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */; };
+		824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */; };
 		82B279312A3E478600D9532A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279302A3E478600D9532A /* AppDelegate.swift */; };
 		82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279322A3E478600D9532A /* SceneDelegate.swift */; };
-		82B279352A3E478600D9532A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279342A3E478600D9532A /* ViewController.swift */; };
-		82B279382A3E478600D9532A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B279362A3E478600D9532A /* Main.storyboard */; };
+		82B279382A3E478600D9532A /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B279362A3E478600D9532A /* Date.storyboard */; };
 		82B2793A2A3E478700D9532A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B279392A3E478700D9532A /* Assets.xcassets */; };
 		82B2793D2A3E478700D9532A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B2793B2A3E478700D9532A /* LaunchScreen.storyboard */; };
+		82B279462A3E4ADE00D9532A /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279452A3E4ADE00D9532A /* DateTableViewController.swift */; };
+		82B279482A3E4B8D00D9532A /* DateTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279472A3E4B8D00D9532A /* DateTableViewInput.swift */; };
+		82B2794A2A3E4BA700D9532A /* DateTableViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279492A3E4BA700D9532A /* DateTableViewOutput.swift */; };
+		82B3AA9D2A40E850000E705A /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3AA9B2A40E850000E705A /* DateTableViewCell.swift */; };
+		82B3AA9E2A40E850000E705A /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B3AA9C2A40E850000E705A /* DateTableViewCell.xib */; };
+		82B3AAA52A40EAC7000E705A /* DateHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */; };
+		82B3AAA62A40EAC7000E705A /* DateHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B3AAA42A40EAC7000E705A /* DateHeaderTableViewCell.xib */; };
+		82FD0C9A2A41A35400F05EEC /* DateTableViewInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C992A41A35400F05EEC /* DateTableViewInteractorInput.swift */; };
+		82FD0C9C2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9B2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift */; };
+		82FD0C9E2A41A38000F05EEC /* DateTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9D2A41A38000F05EEC /* DateTableViewInteractor.swift */; };
+		82FD0CA02A41A3AB00F05EEC /* DateTableViewPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9F2A41A3AB00F05EEC /* DateTableViewPresenterInput.swift */; };
+		82FD0CA22A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA12A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift */; };
+		82FD0CA42A41A3E200F05EEC /* DateTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA32A41A3E200F05EEC /* DateTableViewPresenter.swift */; };
+		82FD0CA62A41A53300F05EEC /* DateTableViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */; };
+		82FD0CA82A41A5A500F05EEC /* DateTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */; };
+		82FD0CAA2A41A5CA00F05EEC /* DateModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceProtocol.swift; sourceTree = "<group>"; };
+		824A8B5D2A3F843900D1ECED /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceProtocol.swift; sourceTree = "<group>"; };
+		824A8B632A3F8F7400D1ECED /* RateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateService.swift; sourceTree = "<group>"; };
+		824A8B692A3F8FD000D1ECED /* MoneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModel.swift; sourceTree = "<group>"; };
+		824A8B6D2A3F901C00D1ECED /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		824A8B702A3F906A00D1ECED /* Rate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rate.storyboard; sourceTree = "<group>"; };
+		824A8B722A3F908400D1ECED /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		824A8B742A3F90B500D1ECED /* RateViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewInput.swift; sourceTree = "<group>"; };
+		824A8B762A3F90C200D1ECED /* RateViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewOutput.swift; sourceTree = "<group>"; };
+		824A8B7C2A3F9F0400D1ECED /* RateViewInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewInteractorInput.swift; sourceTree = "<group>"; };
+		824A8B7E2A3F9F1300D1ECED /* RateViewInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewInteractorOutput.swift; sourceTree = "<group>"; };
+		824A8B802A3F9F2300D1ECED /* RateViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewInteractor.swift; sourceTree = "<group>"; };
+		824A8B822A3F9F4F00D1ECED /* RateViewPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewPresenterInput.swift; sourceTree = "<group>"; };
+		824A8B842A3F9F5C00D1ECED /* RateViewPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewPresenterOutput.swift; sourceTree = "<group>"; };
+		824A8B862A3F9F6A00D1ECED /* RateViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewPresenter.swift; sourceTree = "<group>"; };
+		824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouterInput.swift; sourceTree = "<group>"; };
+		824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouter.swift; sourceTree = "<group>"; };
+		824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModuleBuilder.swift; sourceTree = "<group>"; };
 		82B2792D2A3E478600D9532A /* Exchange Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B279302A3E478600D9532A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B279322A3E478600D9532A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82B279342A3E478600D9532A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82B279372A3E478600D9532A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82B279372A3E478600D9532A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Date.storyboard; sourceTree = "<group>"; };
 		82B279392A3E478700D9532A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B2793C2A3E478700D9532A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B2793E2A3E478700D9532A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B279452A3E4ADE00D9532A /* DateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
+		82B279472A3E4B8D00D9532A /* DateTableViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInput.swift; sourceTree = "<group>"; };
+		82B279492A3E4BA700D9532A /* DateTableViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewOutput.swift; sourceTree = "<group>"; };
+		82B3AA9B2A40E850000E705A /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		82B3AA9C2A40E850000E705A /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
+		82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		82B3AAA42A40EAC7000E705A /* DateHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		82FD0C992A41A35400F05EEC /* DateTableViewInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractorInput.swift; sourceTree = "<group>"; };
+		82FD0C9B2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractorOutput.swift; sourceTree = "<group>"; };
+		82FD0C9D2A41A38000F05EEC /* DateTableViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractor.swift; sourceTree = "<group>"; };
+		82FD0C9F2A41A3AB00F05EEC /* DateTableViewPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenterInput.swift; sourceTree = "<group>"; };
+		82FD0CA12A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenterOutput.swift; sourceTree = "<group>"; };
+		82FD0CA32A41A3E200F05EEC /* DateTableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenter.swift; sourceTree = "<group>"; };
+		82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewRouterInput.swift; sourceTree = "<group>"; };
+		82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewRouter.swift; sourceTree = "<group>"; };
+		82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +100,135 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824A8B672A3F8FAA00D1ECED /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824A8B582A3F82F800D1ECED /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				82B279302A3E478600D9532A /* AppDelegate.swift */,
+				82B279322A3E478600D9532A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		824A8B592A3F833300D1ECED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82B279392A3E478700D9532A /* Assets.xcassets */,
+				82B2793B2A3E478700D9532A /* LaunchScreen.storyboard */,
+				82B2793E2A3E478700D9532A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		824A8B5A2A3F83C000D1ECED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B602A3F8F3000D1ECED /* RateService */,
+				824A8B5F2A3F8F1E00D1ECED /* DateService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		824A8B5F2A3F8F1E00D1ECED /* DateService */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */,
+				824A8B5D2A3F843900D1ECED /* DateService.swift */,
+			);
+			path = DateService;
+			sourceTree = "<group>";
+		};
+		824A8B602A3F8F3000D1ECED /* RateService */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */,
+				824A8B632A3F8F7400D1ECED /* RateService.swift */,
+			);
+			path = RateService;
+			sourceTree = "<group>";
+		};
+		824A8B682A3F8FBF00D1ECED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B692A3F8FD000D1ECED /* MoneyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		824A8B6B2A3F8FF900D1ECED /* NetworkingLayer */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B6C2A3F900900D1ECED /* NetworkingError */,
+			);
+			path = NetworkingLayer;
+			sourceTree = "<group>";
+		};
+		824A8B6C2A3F900900D1ECED /* NetworkingError */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B6D2A3F901C00D1ECED /* NetworkingError.swift */,
+			);
+			path = NetworkingError;
+			sourceTree = "<group>";
+		};
+		824A8B6F2A3F904600D1ECED /* RateVC */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B782A3F9EB600D1ECED /* View */,
+				824A8B7A2A3F9ED200D1ECED /* Interactor */,
+				824A8B792A3F9EC800D1ECED /* Presenter */,
+				824A8B7B2A3F9EDF00D1ECED /* Router */,
+			);
+			path = RateVC;
+			sourceTree = "<group>";
+		};
+		824A8B782A3F9EB600D1ECED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B702A3F906A00D1ECED /* Rate.storyboard */,
+				824A8B742A3F90B500D1ECED /* RateViewInput.swift */,
+				824A8B762A3F90C200D1ECED /* RateViewOutput.swift */,
+				824A8B722A3F908400D1ECED /* RateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		824A8B792A3F9EC800D1ECED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B822A3F9F4F00D1ECED /* RateViewPresenterInput.swift */,
+				824A8B842A3F9F5C00D1ECED /* RateViewPresenterOutput.swift */,
+				824A8B862A3F9F6A00D1ECED /* RateViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		824A8B7A2A3F9ED200D1ECED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B7C2A3F9F0400D1ECED /* RateViewInteractorInput.swift */,
+				824A8B7E2A3F9F1300D1ECED /* RateViewInteractorOutput.swift */,
+				824A8B802A3F9F2300D1ECED /* RateViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		824A8B7B2A3F9EDF00D1ECED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */,
+				824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */,
+				824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		82B279242A3E478600D9532A = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +248,95 @@
 		82B2792F2A3E478600D9532A /* Exchange Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				82B279302A3E478600D9532A /* AppDelegate.swift */,
-				82B279322A3E478600D9532A /* SceneDelegate.swift */,
-				82B279342A3E478600D9532A /* ViewController.swift */,
-				82B279362A3E478600D9532A /* Main.storyboard */,
-				82B279392A3E478700D9532A /* Assets.xcassets */,
-				82B2793B2A3E478700D9532A /* LaunchScreen.storyboard */,
-				82B2793E2A3E478700D9532A /* Info.plist */,
+				824A8B582A3F82F800D1ECED /* Application */,
+				82B279442A3E4A9100D9532A /* DateVC */,
+				824A8B682A3F8FBF00D1ECED /* Models */,
+				824A8B6B2A3F8FF900D1ECED /* NetworkingLayer */,
+				824A8B6F2A3F904600D1ECED /* RateVC */,
+				824A8B592A3F833300D1ECED /* Resources */,
+				824A8B5A2A3F83C000D1ECED /* Services */,
 			);
 			path = "Exchange Storyboard";
+			sourceTree = "<group>";
+		};
+		82B279442A3E4A9100D9532A /* DateVC */ = {
+			isa = PBXGroup;
+			children = (
+				82FD0C952A41A2BD00F05EEC /* View */,
+				82FD0C972A41A31A00F05EEC /* Interactor */,
+				82FD0C962A41A2FF00F05EEC /* Presenter */,
+				82FD0C982A41A32600F05EEC /* Router */,
+			);
+			path = DateVC;
+			sourceTree = "<group>";
+		};
+		82B2794B2A3E4BFA00D9532A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82B3AAA02A40EA70000E705A /* HeaderCell */,
+				82B3AA9F2A40EA5F000E705A /* TableCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		82B3AA9F2A40EA5F000E705A /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				82B3AA9C2A40E850000E705A /* DateTableViewCell.xib */,
+				82B3AA9B2A40E850000E705A /* DateTableViewCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		82B3AAA02A40EA70000E705A /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				82B3AAA42A40EAC7000E705A /* DateHeaderTableViewCell.xib */,
+				82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		82FD0C952A41A2BD00F05EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82B2794B2A3E4BFA00D9532A /* Cells */,
+				82B279362A3E478600D9532A /* Date.storyboard */,
+				82B279472A3E4B8D00D9532A /* DateTableViewInput.swift */,
+				82B279492A3E4BA700D9532A /* DateTableViewOutput.swift */,
+				82B279452A3E4ADE00D9532A /* DateTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82FD0C962A41A2FF00F05EEC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				82FD0C9F2A41A3AB00F05EEC /* DateTableViewPresenterInput.swift */,
+				82FD0CA12A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift */,
+				82FD0CA32A41A3E200F05EEC /* DateTableViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		82FD0C972A41A31A00F05EEC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				82FD0C992A41A35400F05EEC /* DateTableViewInteractorInput.swift */,
+				82FD0C9B2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift */,
+				82FD0C9D2A41A38000F05EEC /* DateTableViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		82FD0C982A41A32600F05EEC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */,
+				82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */,
+				82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +355,9 @@
 			dependencies = (
 			);
 			name = "Exchange Storyboard";
+			packageProductDependencies = (
+				824A8B662A3F8FAA00D1ECED /* Alamofire */,
+			);
 			productName = "Exchange Storyboard";
 			productReference = 82B2792D2A3E478600D9532A /* Exchange Storyboard.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +386,9 @@
 				Base,
 			);
 			mainGroup = 82B279242A3E478600D9532A;
+			packageReferences = (
+				824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 82B2792E2A3E478600D9532A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +403,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B3AA9E2A40E850000E705A /* DateTableViewCell.xib in Resources */,
 				82B2793D2A3E478700D9532A /* LaunchScreen.storyboard in Resources */,
 				82B2793A2A3E478700D9532A /* Assets.xcassets in Resources */,
-				82B279382A3E478600D9532A /* Main.storyboard in Resources */,
+				824A8B712A3F906A00D1ECED /* Rate.storyboard in Resources */,
+				82B3AAA62A40EAC7000E705A /* DateHeaderTableViewCell.xib in Resources */,
+				82B279382A3E478600D9532A /* Date.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +419,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B279352A3E478600D9532A /* ViewController.swift in Sources */,
+				82B2794A2A3E4BA700D9532A /* DateTableViewOutput.swift in Sources */,
+				82FD0CA02A41A3AB00F05EEC /* DateTableViewPresenterInput.swift in Sources */,
+				824A8B832A3F9F4F00D1ECED /* RateViewPresenterInput.swift in Sources */,
+				82B279482A3E4B8D00D9532A /* DateTableViewInput.swift in Sources */,
+				82FD0C9C2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift in Sources */,
+				82B3AA9D2A40E850000E705A /* DateTableViewCell.swift in Sources */,
+				82FD0CA82A41A5A500F05EEC /* DateTableViewRouter.swift in Sources */,
+				82FD0CAA2A41A5CA00F05EEC /* DateModuleBuilder.swift in Sources */,
+				824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */,
+				82FD0C9A2A41A35400F05EEC /* DateTableViewInteractorInput.swift in Sources */,
+				82B279462A3E4ADE00D9532A /* DateTableViewController.swift in Sources */,
+				824A8B772A3F90C200D1ECED /* RateViewOutput.swift in Sources */,
+				824A8B752A3F90B500D1ECED /* RateViewInput.swift in Sources */,
+				82FD0CA62A41A53300F05EEC /* DateTableViewRouterInput.swift in Sources */,
+				82FD0CA22A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift in Sources */,
+				824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */,
+				824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */,
+				82FD0C9E2A41A38000F05EEC /* DateTableViewInteractor.swift in Sources */,
+				824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */,
+				824A8B732A3F908400D1ECED /* RateViewController.swift in Sources */,
+				824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */,
+				824A8B852A3F9F5C00D1ECED /* RateViewPresenterOutput.swift in Sources */,
+				824A8B7F2A3F9F1300D1ECED /* RateViewInteractorOutput.swift in Sources */,
+				824A8B6A2A3F8FD000D1ECED /* MoneyModel.swift in Sources */,
+				824A8B872A3F9F6A00D1ECED /* RateViewPresenter.swift in Sources */,
+				824A8B642A3F8F7400D1ECED /* RateService.swift in Sources */,
+				824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */,
+				82B3AAA52A40EAC7000E705A /* DateHeaderTableViewCell.swift in Sources */,
+				824A8B812A3F9F2300D1ECED /* RateViewInteractor.swift in Sources */,
+				82FD0CA42A41A3E200F05EEC /* DateTableViewPresenter.swift in Sources */,
+				824A8B7D2A3F9F0400D1ECED /* RateViewInteractorInput.swift in Sources */,
 				82B279312A3E478600D9532A /* AppDelegate.swift in Sources */,
+				824A8B6E2A3F901C00D1ECED /* NetworkingError.swift in Sources */,
 				82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,12 +459,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		82B279362A3E478600D9532A /* Main.storyboard */ = {
+		82B279362A3E478600D9532A /* Date.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				82B279372A3E478600D9532A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Date.storyboard;
 			sourceTree = "<group>";
 		};
 		82B2793B2A3E478700D9532A /* LaunchScreen.storyboard */ = {
@@ -289,12 +601,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3V35N9JX9X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exchange Storyboard/Info.plist";
+				INFOPLIST_FILE = "Exchange Storyboard/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Date;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +618,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +631,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3V35N9JX9X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Exchange Storyboard/Info.plist";
+				INFOPLIST_FILE = "Exchange Storyboard/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Date;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +648,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		824A8B662A3F8FAA00D1ECED /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82B279252A3E478600D9532A /* Project object */;
 }
