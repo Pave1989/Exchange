@@ -7,10 +7,6 @@
 
 import Foundation
 
-class RateViewRouter: RateViewRouterInput {
+final class RateViewRouter: RateViewRouterInput {
     
-    weak var viewController: RateViewController?
-    
-    func openRate(for dateVC: String) {
-    }
 }

@@ -9,5 +9,4 @@ import Foundation
 
 protocol RateViewRouterInput {
     
-    func openRate(for dateVC: String)
 }

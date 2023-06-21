@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DateTableViewRouter: DateTableViewRouterInput {
+final class DateTableViewRouter: DateTableViewRouterOutput {
  
     weak var viewController: DateTableViewController?
     

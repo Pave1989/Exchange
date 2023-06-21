@@ -7,13 +7,12 @@
 
 import Foundation
 
-// MARK: - MoneyModel
+// MoneyModel
 struct MoneyModel: Codable {
     let meta: Meta?
     let data: DataClass?
 }
-
-// MARK: - DataClass
+// Валюта в которой показывать курс
 struct DataClass: Codable {
     let rub: Rub?
 
@@ -21,14 +20,12 @@ struct DataClass: Codable {
         case rub = "RUB"
     }
 }
-
-// MARK: - Rub
+// Rub
 struct Rub: Codable {
     let code: String?
     let value: Double?
 }
-
-// MARK: - Meta
+// Meta
 struct Meta: Codable {
     let lastUpdatedAt: Date?
 

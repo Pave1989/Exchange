@@ -9,6 +9,12 @@ import Foundation
 
 protocol RateViewInteractorOutput: AnyObject {
     
+    // ошибка пустой массив с датами
+    func didRecevie(error: String)
+    
+    // загрузка курса доллара
     func didLoadUSD(usdResult: Double)
+    
+    // загрузка курса евро
     func didLoadEUR(eurResult: Double)
 }

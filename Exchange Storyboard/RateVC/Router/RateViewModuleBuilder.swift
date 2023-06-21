@@ -12,16 +12,16 @@ class RateModuleBuilder {
     
 static func build(dateVC: String) -> UIViewController {
     
+    let rateStoriboardID = "Rate"
     let interactor = RateViewInteractor(dateVC: dateVC)
     let router = RateViewRouter()
     let presenter = RateViewPresenter(interactor: interactor, router: router)
-    let storyboard = UIStoryboard(name: "Rate", bundle: nil)
-    let viewController = storyboard.instantiateViewController(withIdentifier: "Rate") as! RateViewController
+    let storyboard = UIStoryboard(name: rateStoriboardID, bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: rateStoriboardID) as! RateViewController
     
     presenter.view = viewController
     interactor.output = presenter
     viewController.output = presenter
-    router.viewController = viewController
     
     return viewController
   }

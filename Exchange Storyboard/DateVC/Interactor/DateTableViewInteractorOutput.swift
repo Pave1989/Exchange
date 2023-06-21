@@ -9,7 +9,7 @@ import Foundation
 
 protocol DateTableViewInteractorOutput: AnyObject {
 
-    // ошибка даты не загрузились
+    // ошибка пустой массив с датами
     func didRecevie(error: String)
     
     // загрузка дат успешно произведена

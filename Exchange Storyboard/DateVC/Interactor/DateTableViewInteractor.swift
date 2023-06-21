@@ -16,7 +16,11 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
     func loadDate() {
         
         datesServise.getData { [weak self] date in
-            self?.output?.didLoad(dates: date)
+            if date == [""]  {
+                self?.output?.didRecevie(error: "Ошибка загрузки дат")
+            } else {
+                self?.output?.didLoad(dates: date)
+            }
         }
     }
 }

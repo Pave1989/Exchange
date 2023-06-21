@@ -9,8 +9,9 @@ import Foundation
 
 protocol RateViewInteractorInput: AnyObject {
     
-    func convertDateFormat(inputDate: String) -> String
     func loadDollar()
     func loadEuro()
+    
+    // Дата которая пришла из DateTableViewController
     var dateVC: String { get }
 }

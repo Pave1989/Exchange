@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82000C7C2A4390C80003F831 /* ConvertDateFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82000C7B2A4390C80003F831 /* ConvertDateFormatService.swift */; };
+		82000C7E2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82000C7D2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift */; };
 		824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */; };
 		824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5D2A3F843900D1ECED /* DateService.swift */; };
 		824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */; };
@@ -45,12 +47,14 @@
 		82FD0CA02A41A3AB00F05EEC /* DateTableViewPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9F2A41A3AB00F05EEC /* DateTableViewPresenterInput.swift */; };
 		82FD0CA22A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA12A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift */; };
 		82FD0CA42A41A3E200F05EEC /* DateTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA32A41A3E200F05EEC /* DateTableViewPresenter.swift */; };
-		82FD0CA62A41A53300F05EEC /* DateTableViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */; };
+		82FD0CA62A41A53300F05EEC /* DateTableViewRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA52A41A53300F05EEC /* DateTableViewRouterOutput.swift */; };
 		82FD0CA82A41A5A500F05EEC /* DateTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */; };
 		82FD0CAA2A41A5CA00F05EEC /* DateModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82000C7B2A4390C80003F831 /* ConvertDateFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertDateFormatService.swift; sourceTree = "<group>"; };
+		82000C7D2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertDateFormatServiceProtocol.swift; sourceTree = "<group>"; };
 		824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceProtocol.swift; sourceTree = "<group>"; };
 		824A8B5D2A3F843900D1ECED /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceProtocol.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		82FD0C9F2A41A3AB00F05EEC /* DateTableViewPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenterInput.swift; sourceTree = "<group>"; };
 		82FD0CA12A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenterOutput.swift; sourceTree = "<group>"; };
 		82FD0CA32A41A3E200F05EEC /* DateTableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewPresenter.swift; sourceTree = "<group>"; };
-		82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewRouterInput.swift; sourceTree = "<group>"; };
+		82FD0CA52A41A53300F05EEC /* DateTableViewRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewRouterOutput.swift; sourceTree = "<group>"; };
 		82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewRouter.swift; sourceTree = "<group>"; };
 		82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82000C7A2A4390AB0003F831 /* ConvertDateService */ = {
+			isa = PBXGroup;
+			children = (
+				82000C7D2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift */,
+				82000C7B2A4390C80003F831 /* ConvertDateFormatService.swift */,
+			);
+			path = ConvertDateService;
+			sourceTree = "<group>";
+		};
 		824A8B582A3F82F800D1ECED /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +142,10 @@
 		824A8B5A2A3F83C000D1ECED /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				824A8B602A3F8F3000D1ECED /* RateService */,
+				82000C7A2A4390AB0003F831 /* ConvertDateService */,
 				824A8B5F2A3F8F1E00D1ECED /* DateService */,
+				824A8B6C2A3F900900D1ECED /* NetworkingError */,
+				824A8B602A3F8F3000D1ECED /* RateService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -159,14 +174,6 @@
 				824A8B692A3F8FD000D1ECED /* MoneyModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		824A8B6B2A3F8FF900D1ECED /* NetworkingLayer */ = {
-			isa = PBXGroup;
-			children = (
-				824A8B6C2A3F900900D1ECED /* NetworkingError */,
-			);
-			path = NetworkingLayer;
 			sourceTree = "<group>";
 		};
 		824A8B6C2A3F900900D1ECED /* NetworkingError */ = {
@@ -251,7 +258,6 @@
 				824A8B582A3F82F800D1ECED /* Application */,
 				82B279442A3E4A9100D9532A /* DateVC */,
 				824A8B682A3F8FBF00D1ECED /* Models */,
-				824A8B6B2A3F8FF900D1ECED /* NetworkingLayer */,
 				824A8B6F2A3F904600D1ECED /* RateVC */,
 				824A8B592A3F833300D1ECED /* Resources */,
 				824A8B5A2A3F83C000D1ECED /* Services */,
@@ -332,7 +338,7 @@
 		82FD0C982A41A32600F05EEC /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				82FD0CA52A41A53300F05EEC /* DateTableViewRouterInput.swift */,
+				82FD0CA52A41A53300F05EEC /* DateTableViewRouterOutput.swift */,
 				82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */,
 				82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */,
 			);
@@ -432,7 +438,7 @@
 				82B279462A3E4ADE00D9532A /* DateTableViewController.swift in Sources */,
 				824A8B772A3F90C200D1ECED /* RateViewOutput.swift in Sources */,
 				824A8B752A3F90B500D1ECED /* RateViewInput.swift in Sources */,
-				82FD0CA62A41A53300F05EEC /* DateTableViewRouterInput.swift in Sources */,
+				82FD0CA62A41A53300F05EEC /* DateTableViewRouterOutput.swift in Sources */,
 				82FD0CA22A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift in Sources */,
 				824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */,
 				824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */,
@@ -440,8 +446,10 @@
 				824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */,
 				824A8B732A3F908400D1ECED /* RateViewController.swift in Sources */,
 				824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */,
+				82000C7C2A4390C80003F831 /* ConvertDateFormatService.swift in Sources */,
 				824A8B852A3F9F5C00D1ECED /* RateViewPresenterOutput.swift in Sources */,
 				824A8B7F2A3F9F1300D1ECED /* RateViewInteractorOutput.swift in Sources */,
+				82000C7E2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift in Sources */,
 				824A8B6A2A3F8FD000D1ECED /* MoneyModel.swift in Sources */,
 				824A8B872A3F9F6A00D1ECED /* RateViewPresenter.swift in Sources */,
 				824A8B642A3F8F7400D1ECED /* RateService.swift in Sources */,

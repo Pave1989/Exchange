@@ -9,18 +9,18 @@ import Foundation
 
 final class DateTableViewPresenter {
     
-    weak var view: DateTableViewInput? //взаимодействие презентера с вью
+    weak var view: DateTableViewInput?
     var interactor: DateTableViewInteractorInput
-    var router: DateTableViewRouterInput
+    var router: DateTableViewRouterOutput
     
     init(
          interactor: DateTableViewInteractorInput,
-         router: DateTableViewRouterInput) {
+         router: DateTableViewRouterOutput) {
             self.interactor = interactor
             self.router = router
     }
 }
-// презентер является делегатом вью а протокол делегата ViewOutput
+
 extension DateTableViewPresenter: DateTableViewOutput {
   
     func viewDidLoad() {
@@ -33,10 +33,12 @@ extension DateTableViewPresenter: DateTableViewOutput {
     }
 }
 
-extension DateTableViewPresenter: DateTableViewInteractorOutput {
+extension DateTableViewPresenter:
+    DateTableViewInteractorOutput {
     
     func didRecevie(error: String) {
-        //
+        
+        view?.showError(error: error)
     }
     
     func didLoad(dates: [String]) {

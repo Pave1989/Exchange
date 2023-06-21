@@ -9,5 +9,8 @@ import Foundation
 
 protocol DateTableViewInput: AnyObject {
     
+    // Показать во view даты
     func showDate(date:[String])
+    // Показать во view ошибку
+    func showError(error: String)
 }

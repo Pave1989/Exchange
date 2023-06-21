@@ -9,9 +9,10 @@ import UIKit
 
 class DateHeaderTableViewCell: UITableViewHeaderFooterView {
 
+    @IBOutlet weak var dateTitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
-
 }

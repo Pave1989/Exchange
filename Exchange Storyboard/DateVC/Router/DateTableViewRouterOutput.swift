@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol DateTableViewRouterInput {
+protocol DateTableViewRouterOutput {
     
+    // Открытие RateViewController с выбранной датой
     func openRate(for dateVC: String)
 }

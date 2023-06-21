@@ -11,7 +11,7 @@
         <!--Date Table View Controller-->
         <scene sceneID="oLW-tj-rg2">
             <objects>
-                <tableViewController storyboardIdentifier="Date" id="Bll-aH-YLo" customClass="DateTableViewController" customModule="Exchange_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Date" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bll-aH-YLo" customClass="DateTableViewController" customModule="Exchange_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7zF-9D-J4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

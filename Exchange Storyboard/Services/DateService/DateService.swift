@@ -33,6 +33,6 @@ class DateService: DateServiceProtocol {
             date = calendar.date(byAdding: dayAgoComponent, to: date)!
             dates.append(dateFormater.string(from: date))
         }
-        complition(dates)
+            complition(dates)
     }
 }
