@@ -13,7 +13,7 @@ final class DateTableViewController: UITableViewController {
     private let cellID = "cellID"
     private let headerID = "headerID"
     private var datesArray: [String] = []
-    private var titleDate: String = "Список датт:"
+    private var titleDate: String = "Список дат:"
     
     override func viewDidLoad() {
         super.viewDidLoad()

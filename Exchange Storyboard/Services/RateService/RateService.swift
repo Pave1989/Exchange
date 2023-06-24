@@ -31,6 +31,7 @@ class RateService: RateServiceProtocol {
                         "date": date1,
                         "base_currency": NeedCurrency.dollar,
                         "currencies": NeedCurrency.rubles]
+        
         AF.request(baseURL, method: .get, parameters: parameters).responseDecodable(of: MoneyModel.self, decoder: decoder) { response in
             switch response.result {
             case .success(let value):

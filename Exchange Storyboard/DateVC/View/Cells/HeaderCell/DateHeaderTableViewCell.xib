@@ -47,7 +47,7 @@
     </objects>
     <resources>
         <namedColor name="DateTitleColor">
-            <color red="0.40000000000000002" green="0.58039215686274503" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000596046448" green="0.57999998331069946" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
