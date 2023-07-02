@@ -9,5 +9,6 @@ import Foundation
 
 protocol DateServiceProtocol {
     
-    func getData(complition: @escaping ([String]) -> Void)
+//    func getData(pagination: Bool, complition: @escaping (Result<[String], Error>) -> Void)
+    func getData(complition: @escaping (Result<[String], Error>) -> Void)
 }

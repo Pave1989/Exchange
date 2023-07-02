@@ -33,19 +33,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Nqq-Sx-O5b" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7KC-kg-3hu"/>
                     <constraint firstItem="Nqq-Sx-O5b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="Bs0-pC-gEP"/>
-                    <constraint firstItem="Nqq-Sx-O5b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="H81-CF-SAa"/>
-                    <constraint firstAttribute="trailing" secondItem="Nqq-Sx-O5b" secondAttribute="trailing" constant="50" id="JDB-dj-h5F">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="20"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </constraint>
-                    <constraint firstAttribute="bottom" secondItem="Nqq-Sx-O5b" secondAttribute="bottom" constant="10" id="R3o-a5-LP1"/>
-                    <constraint firstItem="Nqq-Sx-O5b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tHX-AQ-czz"/>
+                    <constraint firstAttribute="trailing" secondItem="Nqq-Sx-O5b" secondAttribute="trailing" constant="50" id="JDB-dj-h5F"/>
+                    <constraint firstItem="Nqq-Sx-O5b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YDy-D5-52P"/>
+                    <constraint firstItem="Nqq-Sx-O5b" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bhD-SV-zV4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -57,7 +48,7 @@
     </objects>
     <resources>
         <namedColor name="DateCellColor">
-            <color red="0.84313725490196079" green="0.79607843137254897" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.84299999475479126" green="0.79600000381469727" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

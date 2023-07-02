@@ -29,6 +29,9 @@
 		824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */; };
 		824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */; };
 		824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */; };
+		8255E1D62A48CFC200EB252B /* LoaidngTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255E1D42A48CFC200EB252B /* LoaidngTableViewCell.swift */; };
+		8255E1D72A48CFC200EB252B /* LoaidngTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8255E1D52A48CFC200EB252B /* LoaidngTableViewCell.xib */; };
+		82AD9D3C2A4A12EA00CD4DB5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AD9D3B2A4A12EA00CD4DB5 /* APICaller.swift */; };
 		82B279312A3E478600D9532A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279302A3E478600D9532A /* AppDelegate.swift */; };
 		82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279322A3E478600D9532A /* SceneDelegate.swift */; };
 		82B279382A3E478600D9532A /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B279362A3E478600D9532A /* Date.storyboard */; };
@@ -74,6 +77,9 @@
 		824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouterInput.swift; sourceTree = "<group>"; };
 		824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouter.swift; sourceTree = "<group>"; };
 		824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModuleBuilder.swift; sourceTree = "<group>"; };
+		8255E1D42A48CFC200EB252B /* LoaidngTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaidngTableViewCell.swift; sourceTree = "<group>"; };
+		8255E1D52A48CFC200EB252B /* LoaidngTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaidngTableViewCell.xib; sourceTree = "<group>"; };
+		82AD9D3B2A4A12EA00CD4DB5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		82B2792D2A3E478600D9532A /* Exchange Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B279302A3E478600D9532A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B279322A3E478600D9532A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 		824A8B5A2A3F83C000D1ECED /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82AD9D3A2A4A12D400CD4DB5 /* APICaller  */,
 				82000C7A2A4390AB0003F831 /* ConvertDateService */,
 				824A8B5F2A3F8F1E00D1ECED /* DateService */,
 				824A8B6C2A3F900900D1ECED /* NetworkingError */,
@@ -236,6 +243,23 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		8255E1D32A48CF9200EB252B /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				8255E1D52A48CFC200EB252B /* LoaidngTableViewCell.xib */,
+				8255E1D42A48CFC200EB252B /* LoaidngTableViewCell.swift */,
+			);
+			path = LoadingCell;
+			sourceTree = "<group>";
+		};
+		82AD9D3A2A4A12D400CD4DB5 /* APICaller  */ = {
+			isa = PBXGroup;
+			children = (
+				82AD9D3B2A4A12EA00CD4DB5 /* APICaller.swift */,
+			);
+			path = "APICaller ";
+			sourceTree = "<group>";
+		};
 		82B279242A3E478600D9532A = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +303,7 @@
 		82B2794B2A3E4BFA00D9532A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8255E1D32A48CF9200EB252B /* LoadingCell */,
 				82B3AAA02A40EA70000E705A /* HeaderCell */,
 				82B3AA9F2A40EA5F000E705A /* TableCell */,
 			);
@@ -413,6 +438,7 @@
 				82B2793D2A3E478700D9532A /* LaunchScreen.storyboard in Resources */,
 				82B2793A2A3E478700D9532A /* Assets.xcassets in Resources */,
 				824A8B712A3F906A00D1ECED /* Rate.storyboard in Resources */,
+				8255E1D72A48CFC200EB252B /* LoaidngTableViewCell.xib in Resources */,
 				82B3AAA62A40EAC7000E705A /* DateHeaderTableViewCell.xib in Resources */,
 				82B279382A3E478600D9532A /* Date.storyboard in Resources */,
 			);
@@ -432,7 +458,9 @@
 				82FD0C9C2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift in Sources */,
 				82B3AA9D2A40E850000E705A /* DateTableViewCell.swift in Sources */,
 				82FD0CA82A41A5A500F05EEC /* DateTableViewRouter.swift in Sources */,
+				82AD9D3C2A4A12EA00CD4DB5 /* APICaller.swift in Sources */,
 				82FD0CAA2A41A5CA00F05EEC /* DateModuleBuilder.swift in Sources */,
+				8255E1D62A48CFC200EB252B /* LoaidngTableViewCell.swift in Sources */,
 				824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */,
 				82FD0C9A2A41A35400F05EEC /* DateTableViewInteractorInput.swift in Sources */,
 				82B279462A3E4ADE00D9532A /* DateTableViewController.swift in Sources */,

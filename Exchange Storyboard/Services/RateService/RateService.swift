@@ -16,7 +16,7 @@ class RateService: RateServiceProtocol {
         static let euro = "EUR"
     }
     private let baseURL = "https://api.currencyapi.com/v3/historical"
-    private let key = "cqqIFRgNnIcTr8MA77R6nG709YbLr1Mxumy3UNUV"
+    private let key = "brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01"
 //MARK: - decoder
     private let decoder: JSONDecoder = {
        let decoder = JSONDecoder()
