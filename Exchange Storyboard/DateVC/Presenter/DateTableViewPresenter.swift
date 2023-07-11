@@ -31,19 +31,13 @@ extension DateTableViewPresenter: DateTableViewOutput {
         
         router.openRate(for: dateTap)
     }
+    func addMonth(month: Int) {
+        interactor.loadMonth(month: month)
+    }
 }
 
 extension DateTableViewPresenter:
     DateTableViewInteractorOutput {
-    
-//    func didLoad(pagination: Bool) {
-//        
-//        view?.showPagination(pagination: pagination)
-//    }
-//    func didLoad(moreDates: [String]) {
-//        
-//        view?.showMoreDate(date: moreDates)
-//    }
     
     func didRecevie(error: String) {
         

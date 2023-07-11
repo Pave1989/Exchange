@@ -8,16 +8,29 @@
 import Foundation
 
 final class DateTableViewInteractor:  DateTableViewInteractorInput {
-
+    
     weak var output: DateTableViewInteractorOutput?
     
     var datesServise = DateService()
-    
-    func loadDate() {
+    var monthInteractor: Int
 
-        datesServise.getData {  [weak self] result in
+    init(monthInt: Int) {
+        self.monthInteractor = monthInt
+    }
+    //сюда приходит значение от вью
+    // MARK: - здесь надо что то сделать
+    func loadMonth(month: Int) {
+        self.monthInteractor = month
+        print("from interactor: \(month)")
+    }
+    //сюда возвращять значение monthInt - 1!!!
+    func loadDate() {
+        
+        datesServise.getData(month: monthInteractor) {
+            [weak self] result in
             switch result {
             case.success(let data):
+                
                 self?.output?.didLoad(dates: data)
             case.failure(_):
                 let error = "ошибка загрузки дат"
@@ -25,30 +38,4 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
             }
         }
     }
-//    func loadPagination() {
-//       let pagination = datesServise.isPaginating
-//        self.output?.didLoad(pagination: pagination)
-//    }
-    //    func loadMoreDate() {
-    //        datesServise.getData(pagination: true) { [weak self] result in
-    //            switch result {
-    //            case .success(let moreDates):
-    //                self?.output?.didLoad(moreDates: moreDates)
-    //            case .failure(_):
-    //                break
-    //            }
-    //        }
-    //    }
-//    func loadDate() {
-//
-//        datesServise.getData (pagination: false, complition: {  [weak self] result in
-//            switch result {
-//            case.success(let data):
-//                self?.output?.didLoad(dates: data)
-//            case.failure(_):
-//                let errorSTR = "ошибка загрузки дат"
-//                self?.output?.didRecevie(error: errorSTR)
-//            }
-//        })
-//    }
 }

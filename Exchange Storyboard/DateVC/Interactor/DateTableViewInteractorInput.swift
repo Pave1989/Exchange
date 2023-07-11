@@ -10,4 +10,6 @@ import Foundation
 protocol DateTableViewInteractorInput {
 
     func loadDate()
+    func loadMonth(month: Int)
+    var monthInteractor: Int { get }
 }

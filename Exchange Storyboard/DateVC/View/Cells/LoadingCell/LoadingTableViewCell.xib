@@ -10,27 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LoaidngTableViewCell" customModule="Exchange_Storyboard" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LoadingTableViewCell" customModule="Exchange_Storyboard" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZQM-li-L9H">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Xyb-MQ-qD5">
                         <rect key="frame" x="150" y="12" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ZQM-li-L9H" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3h2-rw-JfF"/>
-                    <constraint firstItem="ZQM-li-L9H" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="58H-Oy-v1l"/>
+                    <constraint firstItem="Xyb-MQ-qD5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jub-XJ-aC4"/>
+                    <constraint firstItem="Xyb-MQ-qD5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pRr-5S-LoA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="loadSpinner" destination="ZQM-li-L9H" id="qis-Hu-f3o"/>
+                <outlet property="loadIndicator" destination="Xyb-MQ-qD5" id="ts9-pg-uU1"/>
             </connections>
-            <point key="canvasLocation" x="139" y="74"/>
+            <point key="canvasLocation" x="139" y="73"/>
         </tableViewCell>
     </objects>
 </document>

@@ -12,4 +12,5 @@ protocol DateTableViewOutput {
     func viewDidLoad()
     // Прокидывается дата в выбранной ячейке
     func didTapCell(dateTap: String)
+    func addMonth(month: Int)
 }

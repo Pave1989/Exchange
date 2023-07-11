@@ -10,12 +10,10 @@ import UIKit
 
 class DateModuleBuilder {
     
-   
-    
     static func build() -> UIViewController {
         
     let dateStoriboardID = "Date"
-    let interactor = DateTableViewInteractor()
+    let interactor = DateTableViewInteractor(monthInt: -1)
     let router = DateTableViewRouter()
     let presenter = DateTableViewPresenter(interactor: interactor, router: router)
     let storuboard = UIStoryboard(name: dateStoriboardID, bundle: nil)
