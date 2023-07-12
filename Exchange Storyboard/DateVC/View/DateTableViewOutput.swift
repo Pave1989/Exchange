@@ -12,5 +12,6 @@ protocol DateTableViewOutput {
     func viewDidLoad()
     // Прокидывается дата в выбранной ячейке
     func didTapCell(dateTap: String)
+    // Прокидывается значение колличества необходимых ячеек
     func addMonth(month: Double)
 }

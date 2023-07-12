@@ -8,5 +8,6 @@
 import Foundation
 
 enum NetworkingError: Error {
+    
     case badUrl, badRequest, badResponse, invalidData
 }

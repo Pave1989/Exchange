@@ -8,18 +8,18 @@
 import Foundation
 
 class ConvertDateFormatService: ConvertDateFormatServiceProtocol {
-
-func convertDateFormat(inputDate: String) -> String {
     
-     let olDateFormatter = DateFormatter()
-     olDateFormatter.dateFormat = "dd MMMM yyyy"
-
-     let oldDate = olDateFormatter.date(from: inputDate)
-
-     let convertDateFormatter = DateFormatter()
-     convertDateFormatter.dateFormat = "yyyy-MM-dd"
-     let newDate = convertDateFormatter.string(from: oldDate!)
-    
-    return newDate
-}
+    func convertDateFormat(inputDate: String) -> String {
+        
+        let olDateFormatter = DateFormatter()
+        olDateFormatter.dateFormat = "dd MMMM yyyy"
+        
+        let oldDate = olDateFormatter.date(from: inputDate)
+        
+        let convertDateFormatter = DateFormatter()
+        convertDateFormatter.dateFormat = "yyyy-MM-dd"
+        let newDate = convertDateFormatter.string(from: oldDate!)
+        
+        return newDate
+    }
 }

@@ -15,7 +15,8 @@ final class DateTableViewController: UITableViewController {
     private var datesArray: [String] = []
     private var datesArrayAdd: [String] = []       //????
     private var titleDate: String = "Список дат:"
-    private var monthInt: Double = 0.0
+    private var month: Double = 0.0
+    private var monthAdd: Double = 30.0
     
     private let dateService = DateService()
     
@@ -82,14 +83,15 @@ final class DateTableViewController: UITableViewController {
 
         func loadMoreData(){
 
-            monthInt = monthInt - 30.0
-            output?.addMonth(month: monthInt)
-            print("From VC: \(monthInt)")
+            month = month - monthAdd
+            output?.addMonth(month: month)
+            print("From VC: \(month)")
         }
     }
  }
 
 extension DateTableViewController: DateTableViewInput {
+    //MARK: - нужен метод для повторного изьятия у сервиса массива дат и добавление его к имеющемуся!
     
     func showDate(date: [String]) {
 

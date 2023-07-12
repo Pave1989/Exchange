@@ -27,7 +27,7 @@ final class RateViewInteractor: RateViewInteractorInput{
             case .success(let model):
                 guard let dollar = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
-                    let error = "ошибка"
+                    let error = "отсутствие данных"
                     self?.output?.didRecevie(error: error)
                     return
                 }
@@ -47,7 +47,7 @@ final class RateViewInteractor: RateViewInteractorInput{
             case .success(let model):
                 guard let euro = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
-                    let error = "нет данных"
+                    let error = "отсутствие данных"
                     self?.output?.didRecevie(error: error)
                     return
                 }
