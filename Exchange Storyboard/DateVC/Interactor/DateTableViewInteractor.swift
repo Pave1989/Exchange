@@ -12,16 +12,11 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
     weak var output: DateTableViewInteractorOutput?
     
     var datesServise = DateService()
-    var monthInteractor: Int
+    var monthInteractor: Double = 0.0
 
-    init(monthInt: Int) {
-        self.monthInteractor = monthInt
-    }
     //сюда приходит значение от вью
-    // MARK: - здесь надо что то сделать
-    func loadMonth(month: Int) {
+    func loadMonth(month: Double) {
         self.monthInteractor = month
-        print("from interactor: \(month)")
     }
     //сюда возвращять значение monthInt - 1!!!
     func loadDate() {
@@ -33,7 +28,7 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
                 
                 self?.output?.didLoad(dates: data)
             case.failure(_):
-                let error = "ошибка загрузки дат"
+                let error = "данные отсутствуют"
                 self?.output?.didRecevie(error: error)
             }
         }

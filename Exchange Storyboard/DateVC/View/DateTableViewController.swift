@@ -13,12 +13,11 @@ final class DateTableViewController: UITableViewController {
     private let headerID = "headerID"
     private let loadingID = "loadingID"
     private var datesArray: [String] = []
+    private var datesArrayAdd: [String] = []       //????
     private var titleDate: String = "Список дат:"
-
+    private var monthInt: Double = 0.0
+    
     private let dateService = DateService()
-    var monthInt = 0
-    var page = -1
-    var pageSize = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,20 @@ final class DateTableViewController: UITableViewController {
         output?.viewDidLoad()
         tableView.register(UINib(nibName: String(describing: DateTableViewCell.self), bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib(nibName: String(describing: DateHeaderTableViewCell.self), bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
-        tableView.register(UINib(nibName: String(describing: LoadingTableViewCell.self), bundle: nil), forCellReuseIdentifier: loadingID)
+        tableView.register(UINib(nibName: String(describing: LoadingTableViewCell.self), bundle: nil), forCellReuseIdentifier: loadingID)        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let dateService = DateService()
+            var month: Double = 30.0
+            dateService.getData(month: month) { value in
+                switch value {
+                case.success(let data):
+                    print(data)
+                case .failure(_):
+                    print("error")
+                }
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -43,7 +55,7 @@ final class DateTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if /*page < pageSize && */indexPath.row == datesArray.count - 1 {
+        if indexPath.row == datesArray.count - 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: loadingID) as! LoadingTableViewCell
             cell.loadIndicator.startAnimating()
             return cell
@@ -69,22 +81,10 @@ final class DateTableViewController: UITableViewController {
         }
 
         func loadMoreData(){
-// MARK: - надо за просить сервис еще раз
 
-            monthInt = monthInt - 1
+            monthInt = monthInt - 30.0
             output?.addMonth(month: monthInt)
-            tableView.reloadData()
             print("From VC: \(monthInt)")
-            print("LoadMoreData...")
-            dateService.getData(month: monthInt) { value in
-                switch value {
-                case.success(let dates):
-                    self.datesArray = dates
-                    
-                case.failure(let error):
-                    print(error)
-                }
-            }
         }
     }
  }
@@ -94,17 +94,12 @@ extension DateTableViewController: DateTableViewInput {
     func showDate(date: [String]) {
 
         self.datesArray = date
-        print("Dates count = \(self.datesArray.count)")
-
         self.tableView.reloadData()
-
     }
     
     func showError(error: String) {
         
         self.titleDate = error
     }
-    
- 
  }
 

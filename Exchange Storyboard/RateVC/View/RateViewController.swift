@@ -40,9 +40,9 @@ extension RateViewController: RateViewInput {
     }
     
     func showError(error: String) {
-                
+        DispatchQueue.main.async {
             self.dollarValueLabel.text = error
             self.euroValueLabel.text = error
-    }
- 
+        }
+    } 
 }

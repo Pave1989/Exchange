@@ -31,7 +31,7 @@ extension DateTableViewPresenter: DateTableViewOutput {
         
         router.openRate(for: dateTap)
     }
-    func addMonth(month: Int) {
+    func addMonth(month: Double) {
         interactor.loadMonth(month: month)
     }
 }
